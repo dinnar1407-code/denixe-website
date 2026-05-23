@@ -240,7 +240,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row">
             {/* Left text */}
-            <div className="p-10 md:p-16 flex-1 flex flex-col justify-center text-white">
+            <div className="p-10 md:p-16 flex flex-col justify-center text-white" style={{ flex: "0 0 45%" }}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
                 DNX 700U Series
               </h2>
