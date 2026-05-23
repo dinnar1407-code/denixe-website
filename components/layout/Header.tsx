@@ -15,31 +15,28 @@ export default function Header() {
     else { router.push(pathname.replace(/^\/zh/,'') || '/'); }
   }
 
-  const cn=(a:string,b:string):string=>a+' '+b;
-  const navClass=(active:boolean)=>cn('text-sm px-2 py-1 rounded transition-colors',active?'text-[#D4A843] font-semibold':'text-[#A0A0A0] hover:text-[#D4A843]');
-  const mobileClass=(active:boolean)=>cn('text-sm px-3 py-1 rounded',active?'text-[#D4A843]':'text-[#A0A0A0]');
   return (
-    <header className="fixed top-0 w-full z-50 bg-[#0a0a0f]/85 backdrop-blur-md border-b border-[#2a2a3a]">
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" className="text-2xl font-bold tracking-widest"><span className="text-[#D4A843]">DENI</span><span className="text-[#F5F5F5]">XE</span></a>
+    <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" className="text-xl font-bold tracking-tight text-gray-900">DENIXE</a>
         <nav className="hidden md:flex items-center gap-8">
-          {links.map(l=><a key={l.href} href={isZh?"/zh"+l.href:l.href} className="text-sm text-[#A0A0A0] hover:text-[#D4A843] transition-colors">{l.label}</a>)}
-          <div className="flex items-center gap-2 ml-4 border-l border-[#2a2a3a] pl-4">
-            <button onClick={()=>switchLang('en')} className={navClass(!isZh)}>EN</button>
-            <span className="text-[#2a2a3a]">|</span>
-            <button onClick={()=>switchLang('zh')} className={navClass(isZh)}>中文</button>
+          {links.map(l=><a key={l.href} href={isZh?"/zh"+l.href:l.href} className="text-sm text-gray-600 hover:text-gray-900 hover:underline transition-colors">{l.label}</a>)}
+          <div className="flex items-center gap-2 ml-4 border-l border-gray-200 pl-4">
+            <button onClick={()=>switchLang('en')} className={`text-sm px-2 py-1 rounded transition-colors ${!isZh?'text-gray-900 font-semibold':'text-gray-400 hover:text-gray-700'}`}>EN</button>
+            <span className="text-gray-300">|</span>
+            <button onClick={()=>switchLang('zh')} className={`text-sm px-2 py-1 rounded transition-colors ${isZh?'text-gray-900 font-semibold':'text-gray-400 hover:text-gray-700'}`}>中文</button>
           </div>
         </nav>
         <button className="md:hidden" onClick={()=>setOpen(!open)}>
-          {open?<X className="text-[#F5F5F5]"/>:<Menu className="text-[#F5F5F5]"/>}
+          {open?<X className="text-gray-900"/>:<Menu className="text-gray-900"/>}
         </button>
       </div>
       {open&&(
-        <div className="md:hidden bg-[#0a0a0f] border-b border-[#2a2a3a] px-4 py-3 flex flex-col gap-3">
-          {links.map(l=><a key={l.href} href={isZh?"/zh"+l.href:l.href} className="text-sm text-[#A0A0A0] hover:text-[#D4A843] transition-colors">{l.label}</a>)}
-          <div className="flex gap-2 pt-2 border-t border-[#2a2a3a]">
-            <button onClick={()=>switchLang('en')} className={mobileClass(!isZh)}>EN</button>
-            <button onClick={()=>switchLang('zh')} className={mobileClass(isZh)}>中文</button>
+        <div className="md:hidden bg-white border-b border-gray-200 px-6 py-4 flex flex-col gap-3">
+          {links.map(l=><a key={l.href} href={isZh?"/zh"+l.href:l.href} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{l.label}</a>)}
+          <div className="flex gap-2 pt-3 border-t border-gray-200">
+            <button onClick={()=>switchLang('en')} className={`text-sm px-3 py-1 rounded ${!isZh?'text-gray-900 font-semibold':'text-gray-400'}`}>EN</button>
+            <button onClick={()=>switchLang('zh')} className={`text-sm px-3 py-1 rounded ${isZh?'text-gray-900 font-semibold':'text-gray-400'}`}>中文</button>
           </div>
         </div>
       )}
