@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#12121a"/>
+  <rect x="100" y="300" width="200" height="300" fill="#1a1a24" stroke="#2a2a3a" stroke-width="1"/>
+  <rect x="350" y="200" width="300" height="400" fill="#1a1a24" stroke="#2a2a3a" stroke-width="1"/>
+  <rect x="700" y="350" width="250" height="250" fill="#1a1a24" stroke="#2a2a3a" stroke-width="1"/>
+  <text x="600" y="50" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#555">Suzhou Industrial Park, Jiangsu, China</text>
+  <text x="600" y="580" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#D4A843">14 Years of Precision Engineering · ISO 9001</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a24"/>
+      <stop offset="100%" stop-color="#12121a"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4A843"/>
+      <stop offset="100%" stop-color="#B87333"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- Machine body -->
+  <rect x="150" y="200" width="500" height="250" rx="8" fill="#2a2a3a" stroke="#444" stroke-width="2"/>
+  <!-- Spindle -->
+  <rect x="350" y="80" width="100" height="120" rx="4" fill="#333" stroke="#D4A843" stroke-width="1.5"/>
+  <!-- Work table -->
+  <rect x="200" y="320" width="400" height="20" rx="2" fill="#3a3a4a" stroke="#555" stroke-width="1"/>
+  <!-- 5-axis arms -->
+  <rect x="180" y="250" width="40" height="120" rx="3" fill="#2a2a3a" stroke="#D4A843" stroke-width="1"/>
+  <rect x="580" y="250" width="40" height="120" rx="3" fill="#2a2a3a" stroke="#D4A843" stroke-width="1"/>
+  <!-- Branding -->
+  <text x="400" y="530" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="url(#metal)">DNX Series</text>
+  <text x="400" y="560" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#777">5-Axis High-Speed Milling Center</text>
+  <text x="400" y="40" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555">Product Image</text>
+</svg>
