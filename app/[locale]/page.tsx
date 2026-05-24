@@ -192,7 +192,7 @@ export default function HomePage() {
                 src="/images/products/dnx700u-realistic.webp"
                 alt="DNX 700U 5-Axis Machining Center"
                 fill
-                className="object-contain"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, 55vw"
                 priority
               />
