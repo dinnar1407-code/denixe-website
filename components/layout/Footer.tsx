@@ -1,19 +1,25 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 export default function Footer() {
+  const pf = useTranslations('products');
+  const ft = useTranslations('footer');
+  const nv = useTranslations('nav');
+
   const productLinks = [
-    { href: '/products/dnx', label: 'DNX Series' },
-    { href: '/products/hps', label: 'HPS Series' },
-    { href: '/products/scroll', label: 'WX Series' },
+    { href: '/products/dnx', label: pf('dnx.name') },
+    { href: '/products/hps', label: pf('hps.name') },
+    { href: '/products/scroll', label: pf('scroll.name') },
   ];
+
   const companyLinks = [
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/about', label: nv('about') },
+    { href: '/contact', label: nv('contact') },
   ];
-  const industryLinks = [
-    { href: '/industries', label: 'Aerospace' },
-    { href: '/industries', label: 'Defense & Marine' },
-    { href: '/industries', label: 'Automotive' },
-    { href: '/industries', label: 'Medical Devices' },
+
+  const industryLabels = [
+    'Aerospace', 'Defense & Marine', 'Automotive', 'Medical Devices',
   ];
 
   return (
@@ -23,11 +29,11 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-gray-900 mb-4">DENIXE</h4>
             <p className="text-sm text-gray-500 leading-relaxed">
-              Precision CNC machining centers. German-standard engineering from Suzhou, China.
+              {ft('brandDesc')}
             </p>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Products</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">{ft('products')}</h4>
             <ul className="space-y-2">
               {productLinks.map(l => (
                 <li key={l.href}><a href={l.href} className="text-sm text-gray-500 hover:text-gray-900 hover:underline transition-colors">{l.label}</a></li>
@@ -35,7 +41,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Company</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">{ft('company')}</h4>
             <ul className="space-y-2">
               {companyLinks.map(l => (
                 <li key={l.href}><a href={l.href} className="text-sm text-gray-500 hover:text-gray-900 hover:underline transition-colors">{l.label}</a></li>
@@ -43,17 +49,17 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-4">Industries</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-4">{ft('industries')}</h4>
             <ul className="space-y-2">
-              {industryLinks.map(l => (
-                <li key={l.label}><a href={l.href} className="text-sm text-gray-500 hover:text-gray-900 hover:underline transition-colors">{l.label}</a></li>
+              {industryLabels.map(label => (
+                <li key={label}><a href="/industries" className="text-sm text-gray-500 hover:text-gray-900 hover:underline transition-colors">{label}</a></li>
               ))}
             </ul>
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-gray-400">© 2026 Denixe Precision Machinery. All rights reserved.</p>
-          <p className="text-xs text-gray-400">info@denixe.com</p>
+          <p className="text-xs text-gray-400">{ft('copyright')}</p>
+          <p className="text-xs text-gray-400">{ft('email')}</p>
         </div>
       </div>
     </footer>

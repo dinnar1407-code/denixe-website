@@ -2,37 +2,24 @@
   "home": {
     "hero": {
       "title": "한계를 넘는 정밀도",
-      "subtitle": "5축 CNC 머시닝 센터",
-      "cta": "제품 살펴보기"
+      "subtitle": "쑤저우의 독일 표준 엔지니어링. 0.002mm 반복 정밀도. 군사급 품질.",
+      "explore": "기계 살펴보기"
     },
-    "precision": {
-      "title": "2마이크론 정밀도",
-      "locate": "위치 결정 정밀도",
-      "repeat": "반복 정밀도",
-      "spindle": "최대 스핀들 RPM"
+    "feature": {
+      "title": "DNX 700U 시리즈",
+      "desc": "5축 동시 머시닝 센터. B축 ±110°, C축 360°. VDI 3441 인증 정밀도.",
+      "cta": "사양 보기"
     },
-    "products": {
-      "title": "제품 라인",
-      "subtitle": "3대 정밀 시리즈",
-      "dnx": "5축 고속 밀링",
-      "hps": "고속 정밀 수직형",
-      "scroll": "스크롤 압축기 전문"
+    "mission": {
+      "title": "30년 이상의 정밀 엔지니어링, 중국 10대 방위 그룹의 신뢰.",
+      "desc": "쑤저우 공업원구에 설립된 DENIXE는 독일, 스위스, 일본 수입 장비를 대체하는 고급 CNC 머시닝 센터를 제공합니다. ISO 9001 인증, 20개 이상의 특허, VDI 3441 테스트 표준이 정밀도에 대한 우리의 헌신을 뒷받침합니다."
     },
-    "nav": {
-      "products": "Products",
-      "industries": "Industries",
-      "about": "About",
-      "contact": "Contact"
-    },
-    "about": {
-      "title": "14년의 정밀 엔지니어링",
-      "desc": "2010년 쑤저우 공업원구 설립. 독일, 스위스, 일본 수입 장비를 경쟁력 있는 가격에 대체."
-    },
-    "footer": {
-      "company": "쑤저우 상진 CNC 기술 유한회사",
-      "address": "중국 장쑤성 쑤저우 공업원구",
-      "phone": "+86-512-62969605",
-      "copyright": "© 2026 DENIXE"
+    "productsTitle": "기계 살펴보기",
+    "industriesTitle": "적용 산업",
+    "cta": {
+      "title": "가공 요구 사항에 대해 상담하시겠습니까?",
+      "contact": "엔지니어링 팀에 문의",
+      "specs": "사양 자료 요청"
     }
   },
   "nav": {
@@ -46,6 +33,8 @@
     "subtitle": "모든 CNC 가공 솔루션",
     "learnMore": "자세히 보기",
     "viewSpecs": "사양 보기",
+    "backToProducts": "← 모든 제품으로",
+    "imageAlt": "{series} 머시닝 센터",
     "dnx": {
       "name": "DNX 시리즈",
       "tag": "플래그십",
@@ -155,9 +144,7 @@
         "repeatability": "±0.002 mm",
         "control": "Siemens 828D / Fanuc 31i-B"
       }
-    },
-    "backToProducts": "← 모든 제품으로",
-    "imageAlt": "{series} 머시닝 센터"
+    }
   },
   "industries": {
     "title": "적용 산업",
@@ -206,38 +193,14 @@
     "timeline": {
       "title": "주요 이정표",
       "items": [
-        {
-          "year": "2010",
-          "event": "쑤저우 공업원구 설립"
-        },
-        {
-          "year": "2013",
-          "event": "최초 5축 시제품"
-        },
-        {
-          "year": "2015",
-          "event": "ISO 9001:2015 인증"
-        },
-        {
-          "year": "2017",
-          "event": "DNX 5축 출시"
-        },
-        {
-          "year": "2019",
-          "event": "특허 20건 돌파"
-        },
-        {
-          "year": "2021",
-          "event": "HPS 고속 시리즈 출시"
-        },
-        {
-          "year": "2023",
-          "event": "WX 스크롤 전용기 출시"
-        },
-        {
-          "year": "2025",
-          "event": "30+ 특허, 글로벌 확장"
-        }
+        {"year": "2010", "event": "쑤저우 공업원구 설립"},
+        {"year": "2013", "event": "최초 5축 시제품"},
+        {"year": "2015", "event": "ISO 9001:2015 인증"},
+        {"year": "2017", "event": "DNX 5축 출시"},
+        {"year": "2019", "event": "특허 20건 돌파"},
+        {"year": "2021", "event": "HPS 고속 시리즈 출시"},
+        {"year": "2023", "event": "WX 스크롤 전용기 출시"},
+        {"year": "2025", "event": "30+ 특허, 글로벌 확장"}
       ]
     },
     "stats": {
@@ -275,10 +238,12 @@
     }
   },
   "footer": {
-    "company": "쑤저우 상진 CNC 기술 유한회사",
-    "address": "중국 장쑤성 쑤저우 공업원구",
-    "phone": "+86-512-62969605",
-    "copyright": "© 2026 DENIXE"
+    "brandDesc": "정밀 CNC 머시닝 센터. 쑤저우의 독일 표준 엔지니어링.",
+    "products": "제품",
+    "company": "회사",
+    "industries": "산업",
+    "copyright": "© 2026 Denixe Precision Machinery. All rights reserved.",
+    "email": "info@denixe.com"
   },
   "locale": {
     "en": "English",

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 /* ────────── AnimatedWord ────────── */
 function AnimatedWord({
@@ -76,6 +77,8 @@ const CARD_MIN_HEIGHT      = 720;
 /* ═══════════════════════════════════════════════ */
 
 export default function HomePage() {
+  const t = useTranslations('home');
+
   const featureRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: featureRef,
@@ -133,11 +136,11 @@ export default function HomePage() {
       <section className="pt-32 pb-8 md:pt-40 md:pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight">
-            <AnimatedText text="Precision Beyond Limits" baseDelayMs={50} />
+            <AnimatedText text={t('hero.title')} baseDelayMs={50} />
           </h1>
           <p className="mt-8 text-lg text-gray-500 leading-relaxed max-w-2xl">
             <AnimatedText
-              text="German-standard engineering from Suzhou. 0.002mm repeatability. Military-grade quality."
+              text={t('hero.subtitle')}
               baseDelayMs={40}
             />
           </p>
@@ -146,7 +149,7 @@ export default function HomePage() {
               href="/products"
               className="inline-flex items-center gap-1 text-base text-gray-900 hover:underline font-medium"
             >
-              Explore our machines <span aria-hidden="true">→</span>
+              {t('hero.explore')} <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -164,17 +167,17 @@ export default function HomePage() {
             style={{ flex: '0 0 45%', scale: textScale, x: textX }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-              DNX 700U Series
+              {t('feature.title')}
             </h2>
             <p className="text-[#a1a1a5] text-lg md:text-xl leading-relaxed mb-10 max-w-md font-light">
-              5-Axis Simultaneous Machining Center. B-axis tilting ±110°, C-axis 360°. VDI 3441 certified precision.
+              {t('feature.desc')}
             </p>
             <div>
               <a
                 href="/products/dnx"
                 className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
               >
-                View specifications
+                {t('feature.cta')}
               </a>
             </div>
           </motion.div>
@@ -202,12 +205,10 @@ export default function HomePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
-            30+ years of precision engineering, trusted by China&apos;s top ten defense groups.
+            {t('mission.title')}
           </h2>
           <p className="mt-6 text-base text-gray-500 leading-relaxed">
-            Founded in Suzhou Industrial Park, DENIXE delivers high-end CNC machining centers that
-            replace German, Swiss, and Japanese imports. Our commitment to precision is backed by
-            ISO 9001 certification, 20+ patents, and VDI 3441 testing standards.
+            {t('mission.desc')}
           </p>
         </div>
       </section>
@@ -216,7 +217,7 @@ export default function HomePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-            Explore the machines
+            {t('productsTitle')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((p) => (
@@ -241,7 +242,7 @@ export default function HomePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
-            Industries Served
+            {t('industriesTitle')}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4">
             {industries.map((ind) => (
@@ -261,20 +262,20 @@ export default function HomePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Ready to discuss your machining requirements?
+            {t('cta.title')}
           </h2>
           <div className="mt-8 flex flex-wrap justify-center gap-8">
             <a
               href="/contact"
               className="inline-flex items-center gap-1 text-base text-gray-900 hover:underline font-medium"
             >
-              Contact engineering <span aria-hidden="true">→</span>
+              {t('cta.contact')} <span aria-hidden="true">→</span>
             </a>
             <a
               href="/products"
               className="inline-flex items-center gap-1 text-base text-gray-900 hover:underline font-medium"
             >
-              Request specifications <span aria-hidden="true">→</span>
+              {t('cta.specs')} <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>

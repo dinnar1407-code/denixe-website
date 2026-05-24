@@ -2,37 +2,24 @@
   "home": {
     "hero": {
       "title": "Precisione Senza Limiti",
-      "subtitle": "Centri di Lavoro CNC a 5 Assi",
-      "cta": "Esplora i Prodotti"
+      "subtitle": "Ingegneria standard tedesco da Suzhou. Ripetibilità 0,002 mm. Qualità militare.",
+      "explore": "Esplora le macchine"
     },
-    "precision": {
-      "title": "Precisione a 2 Micron",
-      "locate": "Accuratezza di Posizionamento",
-      "repeat": "Ripetibilità",
-      "spindle": "Max Giri Mandrino"
+    "feature": {
+      "title": "Serie DNX 700U",
+      "desc": "Centro di lavoro simultaneo a 5 assi. Asse B ±110°, asse C 360°. Precisione certificata VDI 3441.",
+      "cta": "Vedi specifiche"
     },
-    "products": {
-      "title": "Linee di Prodotto",
-      "subtitle": "Tre serie di precisione",
-      "dnx": "Fresatura ad Alta Velocità a 5 Assi",
-      "hps": "Verticale di Precisione ad Alta Velocità",
-      "scroll": "Specialisti Compressori Scroll"
+    "mission": {
+      "title": "30+ anni di ingegneria di precisione, fiducia dei primi dieci gruppi di difesa cinesi.",
+      "desc": "Fondata nel Parco Industriale di Suzhou, DENIXE fornisce centri di lavoro CNC di alta gamma che sostituiscono le importazioni tedesche, svizzere e giapponesi. Il nostro impegno per la precisione è supportato dalla certificazione ISO 9001, oltre 20 brevetti e gli standard di collaudo VDI 3441."
     },
-    "nav": {
-      "products": "Prodotti",
-      "industries": "Settori",
-      "about": "Chi Siamo",
-      "contact": "Contatti"
-    },
-    "about": {
-      "title": "14 Anni di Precisione",
-      "desc": "Fondata nel 2010 nel Parco Industriale di Suzhou, DENIXE fornisce centri di lavoro CNC che sostituiscono le importazioni tedesche, svizzere e giapponesi a prezzi competitivi."
-    },
-    "footer": {
-      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
-      "address": "Parco Industriale di Suzhou, Jiangsu, Cina",
-      "phone": "+86-512-62969605",
-      "copyright": "© 2026 DENIXE"
+    "productsTitle": "Esplora le macchine",
+    "industriesTitle": "Settori Serviti",
+    "cta": {
+      "title": "Pronto a discutere le tue esigenze di lavorazione?",
+      "contact": "Contatta l'ingegneria",
+      "specs": "Richiedi specifiche"
     }
   },
   "nav": {
@@ -46,6 +33,8 @@
     "subtitle": "Esplora la nostra gamma completa di soluzioni di lavorazione CNC",
     "learnMore": "Scopri di più",
     "viewSpecs": "Vedi specifiche",
+    "backToProducts": "← Torna ai prodotti",
+    "imageAlt": "{series} centro di lavoro",
     "dnx": {
       "name": "Serie DNX",
       "tag": "Ammiraglia",
@@ -155,9 +144,7 @@
         "repeatability": "±0,002 mm",
         "control": "Siemens 828D / Fanuc 31i-B"
       }
-    },
-    "backToProducts": "← Torna ai prodotti",
-    "imageAlt": "{series} centro di lavoro"
+    }
   },
   "industries": {
     "title": "Settori Serviti",
@@ -206,38 +193,14 @@
     "timeline": {
       "title": "Pietre Miliari",
       "items": [
-        {
-          "year": "2010",
-          "event": "Fondazione a Suzhou Industrial Park"
-        },
-        {
-          "year": "2013",
-          "event": "Primo prototipo 5 assi"
-        },
-        {
-          "year": "2015",
-          "event": "Certificazione ISO 9001:2015"
-        },
-        {
-          "year": "2017",
-          "event": "Lancio serie DNX 5 assi"
-        },
-        {
-          "year": "2019",
-          "event": "Superati 20 brevetti"
-        },
-        {
-          "year": "2021",
-          "event": "Lancio serie HPS"
-        },
-        {
-          "year": "2023",
-          "event": "Lancio specialista scroll WX"
-        },
-        {
-          "year": "2025",
-          "event": "30+ brevetti, espansione globale"
-        }
+        {"year": "2010", "event": "Fondazione a Suzhou Industrial Park"},
+        {"year": "2013", "event": "Primo prototipo 5 assi"},
+        {"year": "2015", "event": "Certificazione ISO 9001:2015"},
+        {"year": "2017", "event": "Lancio serie DNX 5 assi"},
+        {"year": "2019", "event": "Superati 20 brevetti"},
+        {"year": "2021", "event": "Lancio serie HPS"},
+        {"year": "2023", "event": "Lancio specialista scroll WX"},
+        {"year": "2025", "event": "30+ brevetti, espansione globale"}
       ]
     },
     "stats": {
@@ -275,10 +238,12 @@
     }
   },
   "footer": {
-    "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
-    "address": "Parco Industriale di Suzhou, Jiangsu, Cina",
-    "phone": "+86-512-62969605",
-    "copyright": "© 2026 DENIXE"
+    "brandDesc": "Centri di lavoro CNC di precisione. Ingegneria standard tedesco da Suzhou, Cina.",
+    "products": "Prodotti",
+    "company": "Azienda",
+    "industries": "Settori",
+    "copyright": "© 2026 Denixe Precision Machinery. Tutti i diritti riservati.",
+    "email": "info@denixe.com"
   },
   "locale": {
     "en": "English",

@@ -2,37 +2,24 @@
   "home": {
     "hero": {
       "title": "Précision Sans Limites",
-      "subtitle": "Centres d'Usinage CNC 5 Axes",
-      "cta": "Découvrir les Produits"
+      "subtitle": "Ingénierie standard allemand de Suzhou. Répétabilité de 0,002 mm. Qualité militaire.",
+      "explore": "Découvrir nos machines"
     },
-    "precision": {
-      "title": "Précision à 2 Microns",
-      "locate": "Précision de Positionnement",
-      "repeat": "Répétabilité",
-      "spindle": "Régime Max Broche"
+    "feature": {
+      "title": "Série DNX 700U",
+      "desc": "Centre d'usinage simultané 5 axes. Axe B ±110°, C 360°. Précision certifiée VDI 3441.",
+      "cta": "Voir les spécifications"
     },
-    "products": {
-      "title": "Gammes de Produits",
-      "subtitle": "Trois séries de précision",
-      "dnx": "Fraisage 5 Axes Grande Vitesse",
-      "hps": "Vertical de Précision Grande Vitesse",
-      "scroll": "Spécialistes Compresseurs Scroll"
+    "mission": {
+      "title": "Plus de 30 ans d'ingénierie de précision, confiance des dix plus grands groupes de défense chinois.",
+      "desc": "Fondée dans le Parc Industriel de Suzhou, DENIXE fournit des centres d'usinage CNC haut de gamme qui remplacent les importations allemandes, suisses et japonaises. Notre engagement envers la précision est soutenu par la certification ISO 9001, plus de 20 brevets et les normes de test VDI 3441."
     },
-    "nav": {
-      "products": "Products",
-      "industries": "Industries",
-      "about": "About",
-      "contact": "Contact"
-    },
-    "about": {
-      "title": "14 Ans de Précision",
-      "desc": "Fondée en 2010 dans le Parc Industriel de Suzhou. Remplace les importations allemandes, suisses et japonaises à prix compétitifs."
-    },
-    "footer": {
-      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
-      "address": "Parc Industriel de Suzhou, Jiangsu, Chine",
-      "phone": "+86-512-62969605",
-      "copyright": "© 2026 DENIXE"
+    "productsTitle": "Découvrir les machines",
+    "industriesTitle": "Secteurs d'Activité",
+    "cta": {
+      "title": "Prêt à discuter de vos besoins d'usinage ?",
+      "contact": "Contacter l'ingénierie",
+      "specs": "Demander les spécifications"
     }
   },
   "nav": {
@@ -46,6 +33,8 @@
     "subtitle": "Solutions complètes d'usinage CNC",
     "learnMore": "En savoir plus",
     "viewSpecs": "Voir spécifications",
+    "backToProducts": "← Retour aux produits",
+    "imageAlt": "Centre d'usinage {series}",
     "dnx": {
       "name": "Série DNX",
       "tag": "Phare",
@@ -155,9 +144,7 @@
         "repeatability": "±0,002 mm",
         "control": "Siemens 828D / Fanuc 31i-B"
       }
-    },
-    "backToProducts": "← Retour aux produits",
-    "imageAlt": "Centre d'usinage {series}"
+    }
   },
   "industries": {
     "title": "Secteurs d'Activité",
@@ -206,38 +193,14 @@
     "timeline": {
       "title": "Jalons",
       "items": [
-        {
-          "year": "2010",
-          "event": "Fondation à Suzhou"
-        },
-        {
-          "year": "2013",
-          "event": "1er prototype 5 axes"
-        },
-        {
-          "year": "2015",
-          "event": "ISO 9001:2015"
-        },
-        {
-          "year": "2017",
-          "event": "Série DNX 5 axes"
-        },
-        {
-          "year": "2019",
-          "event": "20 brevets"
-        },
-        {
-          "year": "2021",
-          "event": "Série HPS"
-        },
-        {
-          "year": "2023",
-          "event": "Spécialiste WX"
-        },
-        {
-          "year": "2025",
-          "event": "30+ brevets, expansion mondiale"
-        }
+        {"year": "2010", "event": "Fondation à Suzhou"},
+        {"year": "2013", "event": "1er prototype 5 axes"},
+        {"year": "2015", "event": "ISO 9001:2015"},
+        {"year": "2017", "event": "Série DNX 5 axes"},
+        {"year": "2019", "event": "20 brevets"},
+        {"year": "2021", "event": "Série HPS"},
+        {"year": "2023", "event": "Spécialiste WX"},
+        {"year": "2025", "event": "30+ brevets, expansion mondiale"}
       ]
     },
     "stats": {
@@ -275,10 +238,12 @@
     }
   },
   "footer": {
-    "company": "Suzhou Shangjin CNC Technology",
-    "address": "Parc Industriel de Suzhou, Jiangsu, Chine",
-    "phone": "+86-512-62969605",
-    "copyright": "© 2026 DENIXE"
+    "brandDesc": "Centres d'usinage CNC de précision. Ingénierie standard allemand de Suzhou, Chine.",
+    "products": "Produits",
+    "company": "Entreprise",
+    "industries": "Secteurs",
+    "copyright": "© 2026 Denixe Precision Machinery. Tous droits réservés.",
+    "email": "info@denixe.com"
   },
   "locale": {
     "en": "English",

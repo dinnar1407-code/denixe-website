@@ -2,37 +2,24 @@
   "home": {
     "hero": {
       "title": "無限の精度",
-      "subtitle": "5軸CNCマシニングセンタ",
-      "cta": "製品を見る"
+      "subtitle": "蘇州発のドイツ規格エンジニアリング。0.002mm繰返し精度。ミリタリーグレードの品質。",
+      "explore": "製品を見る"
     },
-    "precision": {
-      "title": "2ミクロンの精度",
-      "locate": "位置決め精度",
-      "repeat": "繰返し精度",
-      "spindle": "最大主軸回転数"
+    "feature": {
+      "title": "DNX 700Uシリーズ",
+      "desc": "5軸同時マシニングセンタ。B軸 ±110°、C軸 360°。VDI 3441認証精度。",
+      "cta": "仕様を見る"
     },
-    "products": {
-      "title": "製品ライン",
-      "subtitle": "3つの精密シリーズ",
-      "dnx": "5軸高速ミーリング",
-      "hps": "高速精密立形",
-      "scroll": "スクロールコンプレッサ専用機"
+    "mission": {
+      "title": "30年以上の精密工学の経験、中国十大防衛グループから信頼。",
+      "desc": "蘇州工業園区に設立されたDENIXEは、ドイツ、スイス、日本からの輸入機を代替するハイエンドCNCマシニングセンタを提供しています。ISO 9001認証、20件以上の特許、VDI 3441試験基準がその精度へのこだわりを証明しています。"
     },
-    "nav": {
-      "products": "製品",
-      "industries": "業界",
-      "about": "会社概要",
-      "contact": "お問合せ"
-    },
-    "about": {
-      "title": "14年の精密工学",
-      "desc": "2010年に蘇州工業園区に設立されたDENIXEは、ドイツ、スイス、日本からの輸入機を競争力のある価格で代替するCNCマシニングセンタを提供しています。"
-    },
-    "footer": {
-      "company": "蘇州上金CNC技術有限公司",
-      "address": "中国江蘇省蘇州工業園区",
-      "phone": "+86-512-62969605",
-      "copyright": "© 2026 DENIXE"
+    "productsTitle": "製品ラインナップ",
+    "industriesTitle": "対応業界",
+    "cta": {
+      "title": "加工要件についてご相談ください",
+      "contact": "エンジニアリングチームに問い合わせる",
+      "specs": "仕様資料を請求する"
     }
   },
   "nav": {
@@ -46,6 +33,8 @@
     "subtitle": "CNC加工ソリューションの全ラインナップをご覧ください",
     "learnMore": "詳細を見る",
     "viewSpecs": "仕様を見る",
+    "backToProducts": "← 全製品に戻る",
+    "imageAlt": "{series} マシニングセンタ",
     "dnx": {
       "name": "DNXシリーズ",
       "tag": "フラッグシップ",
@@ -155,9 +144,7 @@
         "repeatability": "±0.002 mm",
         "control": "Siemens 828D / Fanuc 31i-B"
       }
-    },
-    "backToProducts": "← 全製品に戻る",
-    "imageAlt": "{series} マシニングセンタ"
+    }
   },
   "industries": {
     "title": "対応業界",
@@ -251,10 +238,12 @@
     }
   },
   "footer": {
-    "company": "蘇州上金CNC技術有限公司",
-    "address": "中国江蘇省蘇州工業園区",
-    "phone": "+86-512-62969605",
-    "copyright": "© 2026 DENIXE"
+    "brandDesc": "精密CNCマシニングセンタ。蘇州発のドイツ規格エンジニアリング。",
+    "products": "製品",
+    "company": "会社情報",
+    "industries": "業界",
+    "copyright": "© 2026 Denixe Precision Machinery. All rights reserved.",
+    "email": "info@denixe.com"
   },
   "locale": {
     "en": "English",
