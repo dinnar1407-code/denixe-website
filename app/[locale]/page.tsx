@@ -183,16 +183,16 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 flex items-end justify-end" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
+          <div className="flex-1 flex" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
             <motion.div
+              className="w-full self-stretch"
               style={{ scale: imageScale, x: imageX, y: imageY }}
             >
               <Image
                 src="/images/products/dnx700u-realistic.webp"
                 alt="DNX 700U 5-Axis Machining Center"
-                width={1000}
-                height={CARD_MIN_HEIGHT}
-                className="object-contain"
+                fill
+                className="object-cover object-right-bottom"
                 sizes="(max-width: 768px) 100vw, 55vw"
                 priority
               />
