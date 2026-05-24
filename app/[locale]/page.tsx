@@ -72,7 +72,7 @@ const IMAGE_SHIFT_Y        = '-4%';  // 4. 图片垂直偏移 (如 '-4%' 上移,
 const TEXT_MIN_SCALE       = 0.65;   // 5. 文字最小缩放 (0.3~1.0, 0.65=缩到65%)
 const TEXT_MAX_SCALE       = 1;    // 6. 文字最大回弹 (1.0~2.5, 1.5=放大50%)
 const TEXT_SHIFT_X         = '-6%';  // 7. 文字水平偏移 (如 '-6%' 左移)
-const CARD_MIN_HEIGHT      = 640;
+const CARD_MIN_HEIGHT      = 720;
 // 9. 卡片初始水平 margin → 0 (物理留白缩小到满屏)    // 8. 卡片最小高度 px (400~800)
 /* ═══════════════════════════════════════════════ */
 
@@ -87,7 +87,7 @@ export default function HomePage() {
 
   // ── Card: from normal → fills screen
   // As you scroll down through this section, the card grows to fill more of the viewport
-  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['16rem', '0rem']);
+  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['12rem', '0rem']);
 
   // ── Image: starts small (showing the whole machine) → zooms in to detail
   // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
@@ -183,16 +183,16 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 flex" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
+          <div className="flex-1 relative overflow-hidden flex items-center justify-center" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
             <motion.div
-              className="w-full self-stretch"
               style={{ scale: imageScale, x: imageX, y: imageY }}
             >
               <Image
                 src="/images/products/dnx700u-realistic.webp"
                 alt="DNX 700U 5-Axis Machining Center"
-                fill
-                className="object-cover object-right-bottom"
+                width={1000}
+                height={CARD_MIN_HEIGHT}
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 55vw"
                 priority
               />
