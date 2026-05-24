@@ -59,6 +59,21 @@ function AnimatedText({ text, baseDelayMs }: { text: string; baseDelayMs?: numbe
   );
 }
 
+
+/* ═══════════════════════════════════════════════
+   🎛️  TUNING PARAMETERS — change these numbers
+   then run: npx next build && vercel --prod --yes
+   ═══════════════════════════════════════════════ */
+const IMAGE_INITIAL_SCALE  = 0.85;   // 1. 图片初始缩小量 (0.5~1.0, 越小越远 = 整机全貌)
+const IMAGE_MAX_SCALE      = 2.5;    // 2. 图片最大放大量 (1.5~4.0, 越大越近 = 局部细节)
+const IMAGE_SHIFT_X        = '-5%';  // 3. 图片水平偏移 (如 '-5%' 左移, '5%' 右移)
+const IMAGE_SHIFT_Y        = '-4%';  // 4. 图片垂直偏移 (如 '-4%' 上移, '4%' 下移)
+const TEXT_MIN_SCALE       = 0.65;   // 5. 文字最小缩放 (0.3~1.0, 0.65=缩到65%)
+const TEXT_MAX_SCALE       = 1.5;    // 6. 文字最大回弹 (1.0~2.5, 1.5=放大50%)
+const TEXT_SHIFT_X         = '-6%';  // 7. 文字水平偏移 (如 '-6%' 左移)
+const CARD_MIN_HEIGHT      = 480;    // 8. 卡片最小高度 px (400~800)
+/* ═══════════════════════════════════════════════ */
+
 export default function HomePage() {
   const featureRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -72,15 +87,15 @@ export default function HomePage() {
 
   // ── Image: starts small (showing the whole machine) → zooms in to detail
   // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
-  const imageScale = useTransform(scrollYProgress, [0, 0.6], [0.85, 2.5]);
+  const imageScale = useTransform(scrollYProgress, [0, 0.6], [IMAGE_INITIAL_SCALE, IMAGE_MAX_SCALE]);
   // Shift zoom focal point toward center
-  const imageX = useTransform(scrollYProgress, [0, 0.6], ['0%', '-5%']);
-  const imageY = useTransform(scrollYProgress, [0, 0.6], ['0%', '-4%']);
+  const imageX = useTransform(scrollYProgress, [0, 0.6], ['0%', IMAGE_SHIFT_X]);
+  const imageY = useTransform(scrollYProgress, [0, 0.6], ['0%', IMAGE_SHIFT_Y]);
 
   // ── Text: compress → expand
   // First shrinks to 0.65x, then expands back to 0.97x
-  const textScale = useTransform(scrollYProgress, [0, 0.25, 0.6], [1, 0.65, 1.5]);
-  const textX = useTransform(scrollYProgress, [0, 0.55], ['0%', '-6%']);
+  const textScale = useTransform(scrollYProgress, [0, 0.25, 0.6], [1, TEXT_MIN_SCALE, TEXT_MAX_SCALE]);
+  const textX = useTransform(scrollYProgress, [0, 0.55], ['0%', TEXT_SHIFT_X]);
 
   const products = [
     {
@@ -140,7 +155,7 @@ export default function HomePage() {
       <section ref={featureRef} className="py-16 md:py-20 bg-white">
         <motion.div
           className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
-          style={{ minHeight: '480px' }}
+          style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}
         >
           {/* Left: text — compress then expand */}
           <motion.div
