@@ -1,9 +1,10 @@
 'use client';
 import {useState} from 'react';
 import {Menu,X,Globe} from 'lucide-react';
-import {usePathname,useRouter} from 'next/navigation';
 import {useTranslations} from 'next-intl';
 import Image from 'next/image';
+import {useRouter, usePathname} from '@/i18n/routing';
+import {useParams} from 'next/navigation';
 
 const allLocales:{code:string;native:string}[]=[
   {code:'en',native:'English'},
@@ -20,13 +21,13 @@ const allLocales:{code:string;native:string}[]=[
 export default function Header() {
   const [open,setOpen]=useState(false);
   const [langOpen,setLangOpen]=useState(false);
-  const pathname=usePathname();
-  const router=useRouter();
+  
+  const pathname = usePathname();
+  const router = useRouter();
+  const params = useParams();
+  const currentLocale = (params.locale as string) || 'en';
+  
   const t=useTranslations('nav');
-
-  // Detect current locale from path
-  const pathSegments=pathname.split('/').filter(Boolean);
-  const currentLocale=allLocales.find(l=>l.code===pathSegments[0])?.code||'en';
 
   const links=[
     {href:'/products',label:t('products')},
@@ -36,16 +37,12 @@ export default function Header() {
   ];
 
   function switchLang(lang:string) {
-    const rest=allLocales.some(l=>l.code===pathSegments[0])
-      ? '/'+pathSegments.slice(1).join('/')
-      : pathname;
-    if(lang==='en') { router.push(rest||'/'); }
-    else { router.push('/'+lang+rest); }
+    router.replace(pathname, {locale: lang});
     setLangOpen(false);
   }
 
   function localPath(href:string) {
-    return currentLocale==='en' ? href : '/'+currentLocale+href;
+    return href;
   }
 
   const currentNative=allLocales.find(l=>l.code===currentLocale)?.native||'English';
@@ -53,11 +50,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href={currentLocale==='en'?'/':'/'+currentLocale} className="flex items-center">
-          <Image src="/denixe-logo.png" alt="DENIXE" width={260} height={80} className="h-14 w-auto" priority />
-        </a>
+        <button onClick={() => router.push('/')} className="flex items-center">
+          {/* Logo放大2倍: width从130到260, h-14 -> h-20 (调整比例) */}
+          <Image src="/denixe-logo.png" alt="DENIXE" width={260} height={80} className="h-20 w-auto" priority />
+        </button>
         <nav className="hidden md:flex items-center gap-8">
-          {links.map(l=><a key={l.href} href={localPath(l.href)} className="text-sm text-gray-600 hover:text-gray-900 hover:underline transition-colors">{l.label}</a>)}
+          {links.map(l=><button key={l.href} onClick={() => router.push(l.href)} className="text-sm text-gray-600 hover:text-gray-900 hover:underline transition-colors">{l.label}</button>)}
           <div className="relative ml-4 border-l border-gray-200 pl-4">
             <button
               onClick={()=>setLangOpen(!langOpen)}
@@ -91,7 +89,7 @@ export default function Header() {
       </div>
       {open&&(
         <div className="md:hidden bg-white border-b border-gray-200 px-6 py-4 flex flex-col gap-3">
-          {links.map(l=><a key={l.href} href={localPath(l.href)} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{l.label}</a>)}
+          {links.map(l=><button key={l.href} onClick={() => {router.push(l.href); setOpen(false)}} className="text-left text-sm text-gray-600 hover:text-gray-900 transition-colors">{l.label}</button>)}
           <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-200">
             {allLocales.map(l=>(
               <button
