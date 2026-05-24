@@ -87,7 +87,7 @@ export default function HomePage() {
 
   // ── Card: from normal → fills screen
   // As you scroll down through this section, the card grows to fill more of the viewport
-  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['12rem', '0rem']);
+  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['16rem', '0rem']);
 
   // ── Image: starts small (showing the whole machine) → zooms in to detail
   // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
@@ -183,7 +183,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 flex items-end justify-end" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
+          <div className="flex-1 flex items-end justify-end overflow-hidden" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
             <motion.div
               style={{ scale: imageScale, x: imageX, y: imageY }}
             >
