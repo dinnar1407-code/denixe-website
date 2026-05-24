@@ -3,6 +3,7 @@ import {useState} from 'react';
 import {Menu,X,Globe} from 'lucide-react';
 import {usePathname,useRouter} from 'next/navigation';
 import {useTranslations} from 'next-intl';
+import Image from 'next/image';
 
 const allLocales:{code:string;native:string}[]=[
   {code:'en',native:'English'},
@@ -52,7 +53,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href={currentLocale==='en'?'/':'/'+currentLocale} className="text-xl font-bold tracking-tight text-gray-900">DENIXE</a>
+        <a href={currentLocale==='en'?'/':'/'+currentLocale} className="flex items-center">
+          <Image src="/denixe-logo.png" alt="DENIXE" width={120} height={40} className="h-8 w-auto" priority />
+        </a>
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l=><a key={l.href} href={localPath(l.href)} className="text-sm text-gray-600 hover:text-gray-900 hover:underline transition-colors">{l.label}</a>)}
           <div className="relative ml-4 border-l border-gray-200 pl-4">
