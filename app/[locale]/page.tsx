@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
@@ -20,17 +20,10 @@ function AnimatedWord({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(el);
-        }
-      },
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.unobserve(el); } },
       { threshold: 0.2 },
     );
-
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
@@ -52,13 +45,7 @@ function AnimatedWord({
   );
 }
 
-function AnimatedText({
-  text,
-  baseDelayMs,
-}: {
-  text: string;
-  baseDelayMs?: number;
-}) {
+function AnimatedText({ text, baseDelayMs }: { text: string; baseDelayMs?: number }) {
   const words = text.split(' ');
   return (
     <>
@@ -72,93 +59,19 @@ function AnimatedText({
   );
 }
 
-/* ────────── AnimatedScale ────────── */
-function AnimatedScaleImage({ src, alt }: { src: string; alt: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.2 },
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'scale(1)' : 'scale(0.92)',
-        transition:
-          'opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1)',
-        willChange: 'opacity, transform',
-      }}
-      className="relative w-[350px] h-[350px] md:w-[400px] md:h-[400px]"
-    >
-      <div className="w-full h-full relative rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-contain p-6"
-          sizes="(max-width: 768px) 350px, 400px"
-        />
-      </div>
-    </div>
-  );
-}
-
-/* ────────── Page ────────── */
-
-/* ────────── ScrollZoomImage ────────── */
-function ScrollZoomImage({ src, alt }: { src: string; alt: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!ref.current) return;
-      const rect = ref.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const progress = 1 - (rect.top / windowHeight);
-        const clamped = Math.max(0, Math.min(1, progress));
-        // Scales from 1.0 to 1.15 based on scroll
-        setScale(1 + clamped * 0.15);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <div ref={ref} className="w-full h-full relative overflow-hidden">
-      <div 
-        className="w-full h-full absolute inset-0 transition-transform duration-[50ms] ease-linear will-change-transform"
-        style={{ transform: `scale(${scale})` }}
-      >
-        <Image src={src} alt={alt} fill className="object-cover" />
-      </div>
-    </div>
-  );
-}
-
 export default function HomePage() {
+  const featureRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: featureRef,
+    offset: ['start end', 'end start'],
+  });
+
+  // Text: shrink and shift left
+  const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.88]);
+  const textX = useTransform(scrollYProgress, [0, 0.5], ['0%', '-3%']);
+
+  // Image: expand to dominate the card
+  const imageScale = useTransform(scrollYProgress, [0, 0.55], [1, 1.8]);
 
   const products = [
     {
@@ -185,62 +98,47 @@ export default function HomePage() {
   ];
 
   const industries = [
-    'Aerospace',
-    'Defense & Marine',
-    'Automotive',
-    'Medical Devices',
-    'Precision Molds',
-    'Compressor',
-    'Energy',
+    'Aerospace', 'Defense & Marine', 'Automotive', 'Medical Devices',
+    'Precision Molds', 'Compressor', 'Energy',
   ];
 
   return (
     <>
-      {/* ── Animated Hero ── */}
+      {/* ── Hero: text-only, no image ── */}
       <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            {/* Left: Text — 60% */}
-            <div className="flex-1 lg:w-[60%] max-w-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
-                <AnimatedText
-                  text="Precision Beyond Limits"
-                  baseDelayMs={50}
-                />
-              </h1>
-              <p className="mt-8 text-lg text-gray-500 leading-relaxed max-w-xl">
-                <AnimatedText
-                  text="German-standard engineering from Suzhou. 0.002mm repeatability. Military-grade quality."
-                  baseDelayMs={40}
-                />
-              </p>
-              <div className="mt-10">
-                <a
-                  href="/products"
-                  className="inline-flex items-center gap-1 text-base text-gray-900 hover:underline font-medium"
-                >
-                  Explore our machines <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Right: 3D Product Image — 40% */}
-            <div className="flex-shrink-0 flex items-center justify-center">
-              <AnimatedScaleImage
-                src="/images/products/dnx700u-realistic.webp"
-                alt="DNX 700U 5-Axis Machining Center"
-              />
-            </div>
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight">
+            <AnimatedText text="Precision Beyond Limits" baseDelayMs={50} />
+          </h1>
+          <p className="mt-8 text-lg text-gray-500 leading-relaxed max-w-2xl">
+            <AnimatedText
+              text="German-standard engineering from Suzhou. 0.002mm repeatability. Military-grade quality."
+              baseDelayMs={40}
+            />
+          </p>
+          <div className="mt-10">
+            <a
+              href="/products"
+              className="inline-flex items-center gap-1 text-base text-gray-900 hover:underline font-medium"
+            >
+              Explore our machines <span aria-hidden="true">→</span>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Feature Spotlight — Anthropic Style Black Card */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* ── Feature Spotlight: Black card with parallax image zoom ── */}
+      <section ref={featureRef} className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row">
-            {/* Left text */}
-            <div className="p-10 md:p-16 flex flex-col justify-center text-white" style={{ flex: "0 0 45%" }}>
+          <motion.div
+            className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
+            style={{ minHeight: '560px' }}
+          >
+            {/* Text: shrinks and slides left */}
+            <motion.div
+              className="p-10 md:p-16 flex flex-col justify-center text-white"
+              style={{ flex: '0 0 45%', scale: textScale, x: textX }}
+            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
                 DNX 700U Series
               </h2>
@@ -255,16 +153,29 @@ export default function HomePage() {
                   View specifications
                 </a>
               </div>
+            </motion.div>
+
+            {/* Image: expands on scroll */}
+            <div className="flex-1 relative overflow-hidden min-h-[400px] md:min-h-0">
+              <motion.div
+                className="absolute inset-0 w-full h-full"
+                style={{ scale: imageScale }}
+              >
+                <Image
+                  src="/images/products/dnx700u-realistic.webp"
+                  alt="DNX 700U 5-Axis Machining Center"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 55vw"
+                  priority
+                />
+              </motion.div>
             </div>
-            {/* Right image with scroll zoom */}
-            <div className="w-full md:w-[50%] h-[400px] md:h-auto relative bg-[#0d0d0d] overflow-hidden">
-               <ScrollZoomImage src="/images/products/dnx700u-realistic.webp" alt="DNX 700U" />
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Mission */}
+      {/* ── Mission ── */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
@@ -278,7 +189,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Product Images */}
+      {/* ── Product Images ── */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
@@ -303,7 +214,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Industries */}
+      {/* ── Industries ── */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
@@ -323,7 +234,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ── CTA ── */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
