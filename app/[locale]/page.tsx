@@ -65,7 +65,7 @@ function AnimatedText({ text, baseDelayMs }: { text: string; baseDelayMs?: numbe
    🎛️  TUNING PARAMETERS — change these numbers
    then run: npx next build && vercel --prod --yes
    ═══════════════════════════════════════════════ */
-const IMAGE_INITIAL_SCALE  = 0.8;    // card height with full view
+const IMAGE_INITIAL_SCALE  = 1.0;    // image height = card height via props
 const IMAGE_MAX_SCALE      = 2.0;     // 2. 图片最大放大量 (1.5~4.0, 越大越近 = 局部细节)
 const IMAGE_SHIFT_X        = '-5%';  // 3. 图片水平偏移 (如 '-5%' 左移, '5%' 右移)
 const IMAGE_SHIFT_Y        = '-4%';  // 4. 图片垂直偏移 (如 '-4%' 上移, '4%' 下移)
@@ -183,15 +183,15 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 relative overflow-hidden" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
+          <div className="flex-1 relative overflow-hidden flex items-center justify-center" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
             <motion.div
-              className="absolute inset-0 w-full h-full"
               style={{ scale: imageScale, x: imageX, y: imageY }}
             >
               <Image
                 src="/images/products/dnx700u-realistic.webp"
                 alt="DNX 700U 5-Axis Machining Center"
-                fill
+                width={1000}
+                height={CARD_MIN_HEIGHT}
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 55vw"
                 priority
