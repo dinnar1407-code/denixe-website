@@ -130,7 +130,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero: text-only ── */}
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-white">
+      <section className="pt-32 pb-8 md:pt-40 md:pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight">
             <AnimatedText text="Precision Beyond Limits" baseDelayMs={50} />
@@ -153,7 +153,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Feature Spotlight: Full-viewport parallax card ── */}
-      <section ref={featureRef} className="py-16 md:py-20 bg-white">
+      <section ref={featureRef} className="pt-4 pb-16 md:pt-8 md:pb-20 bg-white">
         <motion.div
           className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
           style={{ scale: cardScale, minHeight: `${CARD_MIN_HEIGHT}px` }}
