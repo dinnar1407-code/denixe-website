@@ -65,8 +65,8 @@ function AnimatedText({ text, baseDelayMs }: { text: string; baseDelayMs?: numbe
    🎛️  TUNING PARAMETERS — change these numbers
    then run: npx next build && vercel --prod --yes
    ═══════════════════════════════════════════════ */
-const IMAGE_INITIAL_SCALE  = 0.15;   // object-cover下显示更大范围
-const IMAGE_MAX_SCALE      = 2.0;     // 2. 图片最大放大量 (1.5~4.0, 越大越近 = 局部细节)
+const IMAGE_INITIAL_SCALE  = 0.25;   // starts showing full machine
+const IMAGE_MAX_SCALE      = 2.0;     // zoom-in target (1.5~4.0)
 const IMAGE_SHIFT_X        = '-5%';  // 3. 图片水平偏移 (如 '-5%' 左移, '5%' 右移)
 const IMAGE_SHIFT_Y        = '-4%';  // 4. 图片垂直偏移 (如 '-4%' 上移, '4%' 下移)
 const TEXT_MIN_SCALE       = 0.65;   // 5. 文字最小缩放 (0.3~1.0, 0.65=缩到65%)
@@ -87,7 +87,7 @@ export default function HomePage() {
 
   // ── Card: from normal → fills screen
   // As you scroll down through this section, the card grows to fill more of the viewport
-  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['12rem', '0rem']);
+  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['12rem', '0rem']); // card expands to fill edges
 
   // ── Image: starts small (showing the whole machine) → zooms in to detail
   // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
@@ -192,7 +192,7 @@ export default function HomePage() {
                 src="/images/products/dnx700u-realistic.webp"
                 alt="DNX 700U 5-Axis Machining Center"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 55vw"
                 priority
               />
