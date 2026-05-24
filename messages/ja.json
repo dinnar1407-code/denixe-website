@@ -1,0 +1,270 @@
+{
+  "home": {
+    "hero": {
+      "title": "無限の精度",
+      "subtitle": "5軸CNCマシニングセンタ",
+      "cta": "製品を見る"
+    },
+    "precision": {
+      "title": "2ミクロンの精度",
+      "locate": "位置決め精度",
+      "repeat": "繰返し精度",
+      "spindle": "最大主軸回転数"
+    },
+    "products": {
+      "title": "製品ライン",
+      "subtitle": "3つの精密シリーズ",
+      "dnx": "5軸高速ミーリング",
+      "hps": "高速精密立形",
+      "scroll": "スクロールコンプレッサ専用機"
+    },
+    "nav": {
+      "products": "製品",
+      "industries": "業界",
+      "about": "会社概要",
+      "contact": "お問合せ"
+    },
+    "about": {
+      "title": "14年の精密工学",
+      "desc": "2010年に蘇州工業園区に設立されたDENIXEは、ドイツ、スイス、日本からの輸入機を競争力のある価格で代替するCNCマシニングセンタを提供しています。"
+    },
+    "footer": {
+      "company": "蘇州上金CNC技術有限公司",
+      "address": "中国江蘇省蘇州工業園区",
+      "phone": "+86-512-62969605",
+      "copyright": "© 2026 DENIXE"
+    }
+  },
+  "nav": {
+    "products": "製品",
+    "industries": "業界",
+    "about": "会社概要",
+    "contact": "お問合せ"
+  },
+  "products": {
+    "title": "精密マシニングセンタ",
+    "subtitle": "CNC加工ソリューションの全ラインナップをご覧ください",
+    "learnMore": "詳細を見る",
+    "viewSpecs": "仕様を見る",
+    "dnx": {
+      "name": "DNXシリーズ",
+      "tag": "フラッグシップ",
+      "desc": "5軸同時マシニングセンタ。B軸 ±110°、C軸 360°。VDI 3441認証取得。",
+      "heroTitle": "DNXシリーズ – 5軸同時加工",
+      "heroDesc": "B軸 ±110°傾斜、C軸 360°回転。VDI 3441認証 ±0.002mm繰返し精度。複雑な航空宇宙、防衛、精密金型用途向け。",
+      "specs": {
+        "title": "技術仕様",
+        "table": "DNX700U",
+        "axisTravel": "移動量 (X/Y/Z)",
+        "bAxis": "B軸傾斜範囲",
+        "cAxis": "C軸回転",
+        "tableSize": "テーブルサイズ",
+        "maxLoad": "最大テーブル積載量",
+        "spindleSpeed": "主軸回転数",
+        "spindleTaper": "主軸テーパ",
+        "toolMagazine": "工具マガジン容量",
+        "rapidTraverse": "早送り速度",
+        "positioning": "位置決め精度",
+        "repeatability": "繰返し精度",
+        "control": "CNC制御装置"
+      },
+      "specValues": {
+        "axisTravel": "700 × 600 × 500 mm",
+        "bAxis": "±110°",
+        "cAxis": "360° 連続",
+        "tableSize": "Ø500 mm",
+        "maxLoad": "400 kg",
+        "spindleSpeed": "24,000 rpm",
+        "spindleTaper": "HSK-A63",
+        "toolMagazine": "32 / 60 本",
+        "rapidTraverse": "60 m/min",
+        "positioning": "±0.003 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 840D sl / Heidenhain TNC 640"
+      },
+      "certifications": "認証・規格",
+      "certs": "ISO 9001:2015認証取得。VDI 3441幾何精度試験済。CE適合。",
+      "features": "主な特徴",
+      "feature1": "最大剛性を実現する熱対称ガントリー設計",
+      "feature2": "B軸・C軸にダイレクトドライブトルクモータを採用",
+      "feature3": "全直線軸にリニアスケールフィードバック",
+      "feature4": "機内計測および工具測定システム"
+    },
+    "hps": {
+      "name": "HPSシリーズ",
+      "tag": "精密",
+      "desc": "高速3軸立形マシニングセンタ。42,000 rpm主軸、ドイツ規格の鋳鉄構造。",
+      "heroTitle": "HPSシリーズ – 高速精密立形",
+      "heroDesc": "42,000 rpm高速主軸。ドイツ規格鋳鉄ベッド。精密金型、医療機器、高速軽金属加工に最適。",
+      "specs": {
+        "title": "技術仕様",
+        "table": "HPS1000",
+        "axisTravel": "移動量 (X/Y/Z)",
+        "tableSize": "テーブルサイズ",
+        "maxLoad": "最大テーブル積載量",
+        "spindleSpeed": "主軸回転数",
+        "spindleTaper": "主軸テーパ",
+        "toolMagazine": "工具マガジン容量",
+        "rapidTraverse": "早送り速度",
+        "positioning": "位置決め精度",
+        "repeatability": "繰返し精度",
+        "control": "CNC制御装置"
+      },
+      "specValues": {
+        "axisTravel": "1000 × 600 × 550 mm",
+        "tableSize": "1200 × 550 mm",
+        "maxLoad": "800 kg",
+        "spindleSpeed": "42,000 rpm",
+        "spindleTaper": "HSK-E40",
+        "toolMagazine": "24 / 30 本",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.005 mm",
+        "repeatability": "±0.003 mm",
+        "control": "Siemens 828D / Fanuc 31i-B5"
+      }
+    },
+    "scroll": {
+      "name": "WXシリーズ",
+      "tag": "専用機",
+      "desc": "超精密スクロールコンプレッサ専用機。EVコンプレッサ用スクロールディスク製造向け。",
+      "heroTitle": "WXシリーズ – スクロールコンプレッサ専用機",
+      "heroDesc": "スクロールコンプレッサディスク加工専用設計。超精密表面仕上げにより、EVコンプレッサおよびHVACスクロール製造に最適化。",
+      "specs": {
+        "title": "技術仕様",
+        "table": "WX1",
+        "axisTravel": "移動量 (X/Y/Z)",
+        "tableSize": "テーブルサイズ",
+        "maxLoad": "最大テーブル積載量",
+        "spindleSpeed": "主軸回転数",
+        "spindleTaper": "主軸テーパ",
+        "toolMagazine": "工具マガジン容量",
+        "rapidTraverse": "早送り速度",
+        "positioning": "位置決め精度",
+        "repeatability": "繰返し精度",
+        "control": "CNC制御装置"
+      },
+      "specValues": {
+        "axisTravel": "650 × 500 × 450 mm",
+        "tableSize": "700 × 420 mm",
+        "maxLoad": "300 kg",
+        "spindleSpeed": "36,000 rpm",
+        "spindleTaper": "HSK-E50",
+        "toolMagazine": "20 本",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.004 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 828D / Fanuc 31i-B"
+      }
+    },
+    "backToProducts": "← 全製品に戻る",
+    "imageAlt": "{series} マシニングセンタ"
+  },
+  "industries": {
+    "title": "対応業界",
+    "subtitle": "重要セクターの精密製造を支える当社の工作機械",
+    "backToProducts": "対応製品を見る →",
+    "cards": {
+      "aerospace": {
+        "name": "航空宇宙",
+        "desc": "チタンおよびインコネル製のタービンブレード、構造部品、着陸装置部品の5軸加工。"
+      },
+      "defense": {
+        "name": "防衛・船舶",
+        "desc": "レーダーシステム、船舶推進装置、装甲車両製造向け高精度部品。"
+      },
+      "automotive": {
+        "name": "自動車",
+        "desc": "EVモータハウジング、トランスミッション部品、高量産精密部品製造。"
+      },
+      "medical": {
+        "name": "医療機器",
+        "desc": "手術器具、整形外科インプラント、歯科補綴物のISO 13485グレード表面仕上げ。"
+      },
+      "molds": {
+        "name": "精密金型",
+        "desc": "射出成形金型、ダイカスト金型、プレス金型のサブミクロン表面品質加工。"
+      },
+      "compressor": {
+        "name": "コンプレッサ",
+        "desc": "EV熱管理およびHVACシステム向けスクロールコンプレッサディスク・ハウジング。"
+      },
+      "energy": {
+        "name": "エネルギー",
+        "desc": "タービン部品、ポンプハウジング、石油・ガス・再生可能エネルギー向け精密部品。"
+      }
+    }
+  },
+  "about": {
+    "title": "DENIXEについて",
+    "subtitle": "中国蘇州発のドイツ規格精密工学",
+    "story": {
+      "title": "私たちの歩み",
+      "p1": "2010年に蘇州工業園区に設立されたDENIXE CNC Technology Co., Ltd.は、ハイエンドCNCマシニングセンタ技術の進歩に取り組んでいます。",
+      "p2": "30件以上の特許とISO 9001:2015認証を取得し、当社の工作機械はドイツの工作機械メーカーと同等のVDI 3441幾何精度基準を満たしています。",
+      "p3": "当社のエンジニアリングチームは、主要工作機械メーカーでの数十年の経験を持ち、ドイツの設計哲学と蘇州の世界クラスの製造エコシステムを融合させています。"
+    },
+    "timeline": {
+      "title": "マイルストーン",
+      "items": [
+        {"year": "2010", "event": "蘇州工業園区に設立"},
+        {"year": "2013", "event": "初の5軸マシニングセンタ試作機"},
+        {"year": "2015", "event": "ISO 9001:2015認証取得"},
+        {"year": "2017", "event": "DNX 5軸シリーズ発表"},
+        {"year": "2019", "event": "特許20件を突破"},
+        {"year": "2021", "event": "HPS高速シリーズ発表"},
+        {"year": "2023", "event": "WXスクロールコンプレッサ専用機発表"},
+        {"year": "2025", "event": "30件以上の特許、グローバル展開を拡大中"}
+      ]
+    },
+    "stats": {
+      "patents": "特許",
+      "iso": "ISO認証",
+      "years": "年の経験",
+      "vdi": "VDI 3441試験済"
+    },
+    "location": {
+      "title": "蘇州工業園区",
+      "desc": "中国でも有数の先進的な製造拠点に位置し、当社工場は世界クラスのサプライチェーンと精密工学の深い人材プールの恩恵を受けています。"
+    }
+  },
+  "contact": {
+    "title": "お問合せ",
+    "subtitle": "エンジニアリングチームにご連絡ください",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "company": "会社名",
+      "phone": "電話番号（任意）",
+      "message": "お問合せ内容",
+      "submit": "送信する",
+      "submitting": "送信中...",
+      "success": "ありがとうございます。24時間以内にご返信いたします。",
+      "error": "エラーが発生しました。もう一度お試しください。"
+    },
+    "info": {
+      "title": "会社情報",
+      "company": "蘇州上金CNC技術有限公司",
+      "address": "中国江蘇省蘇州工業園区",
+      "phone": "+86-512-62969605",
+      "email": "info@denixe.com",
+      "hours": "月〜金 08:00〜17:30 (中国標準時)"
+    }
+  },
+  "footer": {
+    "company": "蘇州上金CNC技術有限公司",
+    "address": "中国江蘇省蘇州工業園区",
+    "phone": "+86-512-62969605",
+    "copyright": "© 2026 DENIXE"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "中文",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "fr": "Français"
+  }
+}

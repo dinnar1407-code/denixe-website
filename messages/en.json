@@ -1,1 +1,270 @@
-{"home":{"hero":{"title":"Precision Beyond Limits","subtitle":"5-Axis CNC Machining Centers","cta":"Explore Products"},"precision":{"title":"Engineered to 2 Microns","locate":"Positioning Accuracy","repeat":"Repeatability","spindle":"Max Spindle RPM"},"products":{"title":"Product Lines","subtitle":"Three precision series","dnx":"5-Axis High-Speed Milling","hps":"High-Speed Precision Vertical","scroll":"Scroll Compressor Specialists"},"nav":{"products":"Products","industries":"Industries","about":"About","contact":"Contact"},"about":{"title":"14 Years of Precision","desc":"Founded in 2010 in Suzhou Industrial Park, DENIXE delivers CNC machining centers that replace German, Swiss, and Japanese imports at competitive pricing."},"footer":{"company":"Suzhou Shangjin CNC Technology Co., Ltd.","address":"Suzhou Industrial Park, Jiangsu, China","phone":"+86-512-62969605","copyright":"© 2026 DENIXE"}}}
+{
+  "home": {
+    "hero": {
+      "title": "Precision Beyond Limits",
+      "subtitle": "5-Axis CNC Machining Centers",
+      "cta": "Explore Products"
+    },
+    "precision": {
+      "title": "Engineered to 2 Microns",
+      "locate": "Positioning Accuracy",
+      "repeat": "Repeatability",
+      "spindle": "Max Spindle RPM"
+    },
+    "products": {
+      "title": "Product Lines",
+      "subtitle": "Three precision series",
+      "dnx": "5-Axis High-Speed Milling",
+      "hps": "High-Speed Precision Vertical",
+      "scroll": "Scroll Compressor Specialists"
+    },
+    "nav": {
+      "products": "Products",
+      "industries": "Industries",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "about": {
+      "title": "14 Years of Precision",
+      "desc": "Founded in 2010 in Suzhou Industrial Park, DENIXE delivers CNC machining centers that replace German, Swiss, and Japanese imports at competitive pricing."
+    },
+    "footer": {
+      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+      "address": "Suzhou Industrial Park, Jiangsu, China",
+      "phone": "+86-512-62969605",
+      "copyright": "© 2026 DENIXE"
+    }
+  },
+  "nav": {
+    "products": "Products",
+    "industries": "Industries",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "products": {
+    "title": "Precision Machining Centers",
+    "subtitle": "Explore our complete range of CNC machining solutions",
+    "learnMore": "Learn more",
+    "viewSpecs": "View specifications",
+    "dnx": {
+      "name": "DNX Series",
+      "tag": "Flagship",
+      "desc": "5-Axis Simultaneous Machining Center. B-axis tilting ±110°, C-axis 360°. VDI 3441 certified.",
+      "heroTitle": "DNX Series – 5-Axis Simultaneous",
+      "heroDesc": "B-axis ±110° tilting, C-axis 360° rotation. VDI 3441 certified ±0.002mm repeatability. Designed for complex aerospace, defense, and precision mold applications.",
+      "specs": {
+        "title": "Technical Specifications",
+        "table": "DNX700U",
+        "axisTravel": "Axis Travel (X/Y/Z)",
+        "bAxis": "B-axis Tilting Range",
+        "cAxis": "C-axis Rotation",
+        "tableSize": "Table Size",
+        "maxLoad": "Max Table Load",
+        "spindleSpeed": "Spindle Speed",
+        "spindleTaper": "Spindle Taper",
+        "toolMagazine": "Tool Magazine Capacity",
+        "rapidTraverse": "Rapid Traverse",
+        "positioning": "Positioning Accuracy",
+        "repeatability": "Repeatability",
+        "control": "CNC Control System"
+      },
+      "specValues": {
+        "axisTravel": "700 × 600 × 500 mm",
+        "bAxis": "±110°",
+        "cAxis": "360° continuous",
+        "tableSize": "Ø500 mm",
+        "maxLoad": "400 kg",
+        "spindleSpeed": "24,000 rpm",
+        "spindleTaper": "HSK-A63",
+        "toolMagazine": "32 / 60 tools",
+        "rapidTraverse": "60 m/min",
+        "positioning": "±0.003 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 840D sl / Heidenhain TNC 640"
+      },
+      "certifications": "Certifications & Standards",
+      "certs": "ISO 9001:2015 certified. VDI 3441 geometric accuracy tested. CE compliant.",
+      "features": "Key Features",
+      "feature1": "Thermally-symmetric gantry design for maximum stiffness",
+      "feature2": "Direct-drive torque motors on B and C rotary axes",
+      "feature3": "Linear scale feedback on all linear axes",
+      "feature4": "In-machine probing and tool measurement"
+    },
+    "hps": {
+      "name": "HPS Series",
+      "tag": "Precision",
+      "desc": "High-Speed 3-Axis Vertical Machining Center. 42,000 rpm spindle, German-standard construction.",
+      "heroTitle": "HPS Series – High-Speed Precision Vertical",
+      "heroDesc": "42,000 rpm high-speed spindle. German-standard cast iron bed. Ideal for precision molds, medical devices, and high-speed light-metal cutting.",
+      "specs": {
+        "title": "Technical Specifications",
+        "table": "HPS1000",
+        "axisTravel": "Axis Travel (X/Y/Z)",
+        "tableSize": "Table Size",
+        "maxLoad": "Max Table Load",
+        "spindleSpeed": "Spindle Speed",
+        "spindleTaper": "Spindle Taper",
+        "toolMagazine": "Tool Magazine Capacity",
+        "rapidTraverse": "Rapid Traverse",
+        "positioning": "Positioning Accuracy",
+        "repeatability": "Repeatability",
+        "control": "CNC Control System"
+      },
+      "specValues": {
+        "axisTravel": "1000 × 600 × 550 mm",
+        "tableSize": "1200 × 550 mm",
+        "maxLoad": "800 kg",
+        "spindleSpeed": "42,000 rpm",
+        "spindleTaper": "HSK-E40",
+        "toolMagazine": "24 / 30 tools",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.005 mm",
+        "repeatability": "±0.003 mm",
+        "control": "Siemens 828D / Fanuc 31i-B5"
+      }
+    },
+    "scroll": {
+      "name": "WX Series",
+      "tag": "Specialized",
+      "desc": "Ultra-Precision Scroll Compressor Special Machine. Built for EV compressor scroll disc manufacturing.",
+      "heroTitle": "WX Series – Scroll Compressor Specialists",
+      "heroDesc": "Purpose-built for scroll compressor disc machining. Optimized for EV compressor and HVAC scroll manufacturing with ultra-precision surface finishing.",
+      "specs": {
+        "title": "Technical Specifications",
+        "table": "WX1",
+        "axisTravel": "Axis Travel (X/Y/Z)",
+        "tableSize": "Table Size",
+        "maxLoad": "Max Table Load",
+        "spindleSpeed": "Spindle Speed",
+        "spindleTaper": "Spindle Taper",
+        "toolMagazine": "Tool Magazine Capacity",
+        "rapidTraverse": "Rapid Traverse",
+        "positioning": "Positioning Accuracy",
+        "repeatability": "Repeatability",
+        "control": "CNC Control System"
+      },
+      "specValues": {
+        "axisTravel": "650 × 500 × 450 mm",
+        "tableSize": "700 × 420 mm",
+        "maxLoad": "300 kg",
+        "spindleSpeed": "36,000 rpm",
+        "spindleTaper": "HSK-E50",
+        "toolMagazine": "20 tools",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.004 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 828D / Fanuc 31i-B"
+      }
+    },
+    "backToProducts": "← Back to all products",
+    "imageAlt": "{series} machining center"
+  },
+  "industries": {
+    "title": "Industries Served",
+    "subtitle": "Our machines power precision manufacturing across critical sectors",
+    "backToProducts": "Explore compatible products →",
+    "cards": {
+      "aerospace": {
+        "name": "Aerospace",
+        "desc": "5-axis machining of turbine blades, structural components, and landing gear parts in titanium and Inconel."
+      },
+      "defense": {
+        "name": "Defense & Marine",
+        "desc": "High-precision components for radar systems, naval propulsion, and armored vehicle manufacturing."
+      },
+      "automotive": {
+        "name": "Automotive",
+        "desc": "EV motor housings, transmission components, and high-volume precision parts manufacturing."
+      },
+      "medical": {
+        "name": "Medical Devices",
+        "desc": "Surgical instruments, orthopedic implants, and dental prosthetics with ISO 13485-grade surface finish."
+      },
+      "molds": {
+        "name": "Precision Molds",
+        "desc": "Injection molds, die-casting molds, and stamping dies with sub-micron surface quality."
+      },
+      "compressor": {
+        "name": "Compressor",
+        "desc": "Scroll compressor discs and housings for EV thermal management and HVAC systems."
+      },
+      "energy": {
+        "name": "Energy",
+        "desc": "Turbine components, pump housings, and precision parts for oil, gas, and renewable energy."
+      }
+    }
+  },
+  "about": {
+    "title": "About DENIXE",
+    "subtitle": "German-standard precision engineering from Suzhou, China",
+    "story": {
+      "title": "Our Story",
+      "p1": "Founded in 2010 in Suzhou Industrial Park, DENIXE CNC Technology Co., Ltd. has dedicated itself to advancing high-end CNC machining center technology.",
+      "p2": "With over 30 patents and ISO 9001:2015 certification, our machines meet VDI 3441 geometric accuracy standards — the same benchmarks used by German machine tool builders.",
+      "p3": "Our engineering team brings decades of experience from leading machine tool companies, combining German design philosophy with Suzhou's world-class manufacturing ecosystem."
+    },
+    "timeline": {
+      "title": "Milestones",
+      "items": [
+        {"year": "2010", "event": "Company founded in Suzhou Industrial Park"},
+        {"year": "2013", "event": "First 5-axis machining center prototype"},
+        {"year": "2015", "event": "ISO 9001:2015 certification"},
+        {"year": "2017", "event": "Launched DNX 5-axis series"},
+        {"year": "2019", "event": "Exceeded 20 patents"},
+        {"year": "2021", "event": "HPS high-speed series released"},
+        {"year": "2023", "event": "WX scroll compressor specialist launched"},
+        {"year": "2025", "event": "30+ patents, expanding global presence"}
+      ]
+    },
+    "stats": {
+      "patents": "Patents",
+      "iso": "ISO Certified",
+      "years": "Years Experience",
+      "vdi": "VDI 3441 Tested"
+    },
+    "location": {
+      "title": "Suzhou Industrial Park",
+      "desc": "Located in one of China's most advanced manufacturing zones, our facility benefits from world-class supply chains and a deep talent pool of precision engineering expertise."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our engineering team",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company",
+      "phone": "Phone (optional)",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you! We will respond within 24 hours.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "title": "Company Information",
+      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+      "address": "Suzhou Industrial Park, Jiangsu Province, China",
+      "phone": "+86-512-62969605",
+      "email": "info@denixe.com",
+      "hours": "Mon–Fri, 08:00–17:30 (CST)"
+    }
+  },
+  "footer": {
+    "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+    "address": "Suzhou Industrial Park, Jiangsu, China",
+    "phone": "+86-512-62969605",
+    "copyright": "© 2026 DENIXE"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "中文",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "fr": "Français"
+  }
+}

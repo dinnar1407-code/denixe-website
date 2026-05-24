@@ -1,0 +1,294 @@
+{
+  "home": {
+    "hero": {
+      "title": "한계를 넘는 정밀도",
+      "subtitle": "5축 CNC 머시닝 센터",
+      "cta": "제품 살펴보기"
+    },
+    "precision": {
+      "title": "2마이크론 정밀도",
+      "locate": "위치 결정 정밀도",
+      "repeat": "반복 정밀도",
+      "spindle": "최대 스핀들 RPM"
+    },
+    "products": {
+      "title": "제품 라인",
+      "subtitle": "3대 정밀 시리즈",
+      "dnx": "5축 고속 밀링",
+      "hps": "고속 정밀 수직형",
+      "scroll": "스크롤 압축기 전문"
+    },
+    "nav": {
+      "products": "Products",
+      "industries": "Industries",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "about": {
+      "title": "14년의 정밀 엔지니어링",
+      "desc": "2010년 쑤저우 공업원구 설립. 독일, 스위스, 일본 수입 장비를 경쟁력 있는 가격에 대체."
+    },
+    "footer": {
+      "company": "쑤저우 상진 CNC 기술 유한회사",
+      "address": "중국 장쑤성 쑤저우 공업원구",
+      "phone": "+86-512-62969605",
+      "copyright": "© 2026 DENIXE"
+    }
+  },
+  "nav": {
+    "products": "제품",
+    "industries": "산업",
+    "about": "회사소개",
+    "contact": "문의"
+  },
+  "products": {
+    "title": "정밀 머시닝 센터",
+    "subtitle": "모든 CNC 가공 솔루션",
+    "learnMore": "자세히 보기",
+    "viewSpecs": "사양 보기",
+    "dnx": {
+      "name": "DNX 시리즈",
+      "tag": "플래그십",
+      "desc": "5축 동시 머시닝 센터. B축 ±110°, C축 360°. VDI 3441 인증.",
+      "heroTitle": "DNX 시리즈 – 5축 동시 가공",
+      "heroDesc": "B축 ±110° 틸팅, C축 360° 회전. VDI 3441 인증 ±0.002mm.",
+      "specs": {
+        "title": "기술 사양",
+        "table": "DNX700U",
+        "axisTravel": "이송 거리 (X/Y/Z)",
+        "bAxis": "B축 틸팅 범위",
+        "cAxis": "C축 회전",
+        "tableSize": "테이블 크기",
+        "maxLoad": "최대 하중",
+        "spindleSpeed": "스핀들 속도",
+        "spindleTaper": "스핀들 테이퍼",
+        "toolMagazine": "공구 매거진",
+        "rapidTraverse": "급속 이송",
+        "positioning": "위치 정밀도",
+        "repeatability": "반복 정밀도",
+        "control": "CNC 제어"
+      },
+      "specValues": {
+        "axisTravel": "700 × 600 × 500 mm",
+        "bAxis": "±110°",
+        "cAxis": "360° 연속",
+        "tableSize": "Ø500 mm",
+        "maxLoad": "400 kg",
+        "spindleSpeed": "24,000 rpm",
+        "spindleTaper": "HSK-A63",
+        "toolMagazine": "32 / 60 공구",
+        "rapidTraverse": "60 m/min",
+        "positioning": "±0.003 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 840D sl / Heidenhain TNC 640"
+      },
+      "certifications": "인증 및 표준",
+      "certs": "ISO 9001:2015. VDI 3441. CE 적합.",
+      "features": "주요 특징",
+      "feature1": "열대칭 갠트리 설계",
+      "feature2": "B/C축 다이렉트 드라이브",
+      "feature3": "리니어 스케일 피드백",
+      "feature4": "인머신 프로빙"
+    },
+    "hps": {
+      "name": "HPS 시리즈",
+      "tag": "정밀",
+      "desc": "고속 3축 수직형. 42,000 rpm 스핀들. 독일 표준 주철 구조.",
+      "heroTitle": "HPS 시리즈 – 고속 정밀 수직형",
+      "heroDesc": "42,000 rpm 고속 스핀들. 독일 표준 주철 베드.",
+      "specs": {
+        "title": "기술 사양",
+        "table": "HPS1000",
+        "axisTravel": "이송 거리 (X/Y/Z)",
+        "tableSize": "테이블 크기",
+        "maxLoad": "최대 하중",
+        "spindleSpeed": "스핀들 속도",
+        "spindleTaper": "스핀들 테이퍼",
+        "toolMagazine": "공구 매거진",
+        "rapidTraverse": "급속 이송",
+        "positioning": "위치 정밀도",
+        "repeatability": "반복 정밀도",
+        "control": "CNC 제어"
+      },
+      "specValues": {
+        "axisTravel": "1000 × 600 × 550 mm",
+        "tableSize": "1200 × 550 mm",
+        "maxLoad": "800 kg",
+        "spindleSpeed": "42,000 rpm",
+        "spindleTaper": "HSK-E40",
+        "toolMagazine": "24 / 30 공구",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.005 mm",
+        "repeatability": "±0.003 mm",
+        "control": "Siemens 828D / Fanuc 31i-B5"
+      }
+    },
+    "scroll": {
+      "name": "WX 시리즈",
+      "tag": "전문",
+      "desc": "초정밀 스크롤 압축기 전용기. EV 압축기용.",
+      "heroTitle": "WX 시리즈 – 스크롤 압축기 전문",
+      "heroDesc": "스크롤 압축기 디스크 가공 전용. EV/HVAC 최적화.",
+      "specs": {
+        "title": "기술 사양",
+        "table": "WX1",
+        "axisTravel": "이송 거리 (X/Y/Z)",
+        "tableSize": "테이블 크기",
+        "maxLoad": "최대 하중",
+        "spindleSpeed": "스핀들 속도",
+        "spindleTaper": "스핀들 테이퍼",
+        "toolMagazine": "공구 매거진",
+        "rapidTraverse": "급속 이송",
+        "positioning": "위치 정밀도",
+        "repeatability": "반복 정밀도",
+        "control": "CNC 제어"
+      },
+      "specValues": {
+        "axisTravel": "650 × 500 × 450 mm",
+        "tableSize": "700 × 420 mm",
+        "maxLoad": "300 kg",
+        "spindleSpeed": "36,000 rpm",
+        "spindleTaper": "HSK-E50",
+        "toolMagazine": "20 공구",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.004 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 828D / Fanuc 31i-B"
+      }
+    },
+    "backToProducts": "← 모든 제품으로",
+    "imageAlt": "{series} 머시닝 센터"
+  },
+  "industries": {
+    "title": "적용 산업",
+    "subtitle": "주요 분야 정밀 제조 지원",
+    "backToProducts": "호환 제품 보기 →",
+    "cards": {
+      "aerospace": {
+        "name": "항공우주",
+        "desc": "티타늄/인코넬 터빈 블레이드, 구조 부품 5축 가공."
+      },
+      "defense": {
+        "name": "방위·해양",
+        "desc": "레이더, 함선 추진, 장갑차 고정밀 부품."
+      },
+      "automotive": {
+        "name": "자동차",
+        "desc": "EV 모터 하우징, 변속기, 대량 정밀 부품."
+      },
+      "medical": {
+        "name": "의료 기기",
+        "desc": "ISO 13485 등급 수술 기구, 임플란트, 치과 보철물."
+      },
+      "molds": {
+        "name": "정밀 금형",
+        "desc": "서브미크론 사출/다이캐스팅/프레스 금형."
+      },
+      "compressor": {
+        "name": "압축기",
+        "desc": "EV 열관리/HVAC용 스크롤 디스크 및 하우징."
+      },
+      "energy": {
+        "name": "에너지",
+        "desc": "터빈, 펌프, 석유·가스·재생에너지 부품."
+      }
+    }
+  },
+  "about": {
+    "title": "DENIXE 소개",
+    "subtitle": "중국 쑤저우의 독일 표준 정밀 공학",
+    "story": {
+      "title": "당사 이야기",
+      "p1": "2010년 쑤저우 공업원구 설립. 고급 CNC 머시닝 센터 기술 발전에 전념.",
+      "p2": "30+ 특허, ISO 9001:2015, VDI 3441 표준 충족.",
+      "p3": "독일 설계 철학 + 쑤저우 세계적 제조 생태계 결합."
+    },
+    "timeline": {
+      "title": "주요 이정표",
+      "items": [
+        {
+          "year": "2010",
+          "event": "쑤저우 공업원구 설립"
+        },
+        {
+          "year": "2013",
+          "event": "최초 5축 시제품"
+        },
+        {
+          "year": "2015",
+          "event": "ISO 9001:2015 인증"
+        },
+        {
+          "year": "2017",
+          "event": "DNX 5축 출시"
+        },
+        {
+          "year": "2019",
+          "event": "특허 20건 돌파"
+        },
+        {
+          "year": "2021",
+          "event": "HPS 고속 시리즈 출시"
+        },
+        {
+          "year": "2023",
+          "event": "WX 스크롤 전용기 출시"
+        },
+        {
+          "year": "2025",
+          "event": "30+ 특허, 글로벌 확장"
+        }
+      ]
+    },
+    "stats": {
+      "patents": "특허",
+      "iso": "ISO 인증",
+      "years": "년 경험",
+      "vdi": "VDI 3441"
+    },
+    "location": {
+      "title": "쑤저우 공업원구",
+      "desc": "중국 최고 수준 제조 단지. 세계적 공급망 및 인재 풀."
+    }
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "엔지니어링 팀에 연락",
+    "form": {
+      "name": "이름",
+      "email": "이메일",
+      "company": "회사명",
+      "phone": "전화번호 (선택)",
+      "message": "문의 내용",
+      "submit": "보내기",
+      "submitting": "전송 중...",
+      "success": "감사합니다! 24시간 이내 답변.",
+      "error": "오류. 다시 시도해 주세요."
+    },
+    "info": {
+      "title": "회사 정보",
+      "company": "쑤저우 상진 CNC 기술 유한회사",
+      "address": "중국 장쑤성 쑤저우 공업원구",
+      "phone": "+86-512-62969605",
+      "email": "info@denixe.com",
+      "hours": "월~금 08:00~17:30 (CST)"
+    }
+  },
+  "footer": {
+    "company": "쑤저우 상진 CNC 기술 유한회사",
+    "address": "중국 장쑤성 쑤저우 공업원구",
+    "phone": "+86-512-62969605",
+    "copyright": "© 2026 DENIXE"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "中文",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "fr": "Français"
+  }
+}

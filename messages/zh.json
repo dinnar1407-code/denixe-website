@@ -1,1 +1,270 @@
-{"home":{"hero":{"title":"精度超越极限","subtitle":"五轴联动数控加工中心","cta":"探索产品"},"precision":{"title":"精确至2微米","locate":"定位精度","repeat":"重复定位","spindle":"最高主轴转速"},"products":{"title":"产品系列","subtitle":"三大精密系列","dnx":"五轴高速铣削","hps":"高速高精密立式","scroll":"涡旋压缩机专家"},"nav":{"products":"产品","industries":"行业","about":"关于","contact":"联系"},"about":{"title":"14年精密工程","desc":"2010年创立于苏州工业园区，DENIXE 数控加工中心以更具竞争力的价格替代德国、瑞士、日本进口设备。"},"footer":{"company":"苏州上金数控科技有限公司","address":"中国江苏省苏州市工业园区","phone":"0512-62969605","copyright":"© 2026 DENIXE"}}}
+{
+  "home": {
+    "hero": {
+      "title": "精度超越极限",
+      "subtitle": "五轴联动数控加工中心",
+      "cta": "探索产品"
+    },
+    "precision": {
+      "title": "精确至2微米",
+      "locate": "定位精度",
+      "repeat": "重复定位",
+      "spindle": "最高主轴转速"
+    },
+    "products": {
+      "title": "产品系列",
+      "subtitle": "三大精密系列",
+      "dnx": "五轴高速铣削",
+      "hps": "高速高精密立式",
+      "scroll": "涡旋压缩机专家"
+    },
+    "nav": {
+      "products": "产品",
+      "industries": "行业",
+      "about": "关于",
+      "contact": "联系"
+    },
+    "about": {
+      "title": "14年精密工程",
+      "desc": "2010年创立于苏州工业园区，DENIXE 数控加工中心以更具竞争力的价格替代德国、瑞士、日本进口设备。"
+    },
+    "footer": {
+      "company": "苏州上金数控科技有限公司",
+      "address": "中国江苏省苏州市工业园区",
+      "phone": "0512-62969605",
+      "copyright": "© 2026 DENIXE"
+    }
+  },
+  "nav": {
+    "products": "产品",
+    "industries": "行业",
+    "about": "关于",
+    "contact": "联系"
+  },
+  "products": {
+    "title": "精密加工中心",
+    "subtitle": "探索我们完整的数控加工解决方案",
+    "learnMore": "了解更多",
+    "viewSpecs": "查看规格",
+    "dnx": {
+      "name": "DNX 系列",
+      "tag": "旗舰",
+      "desc": "五轴联动加工中心。B轴倾斜 ±110°，C轴 360°。VDI 3441 认证。",
+      "heroTitle": "DNX 系列 – 五轴联动加工",
+      "heroDesc": "B轴 ±110° 倾斜，C轴 360° 旋转。VDI 3441 认证 ±0.002mm 重复精度。专为复杂航空航天、国防和精密模具应用设计。",
+      "specs": {
+        "title": "技术规格",
+        "table": "DNX700U",
+        "axisTravel": "行程 (X/Y/Z)",
+        "bAxis": "B轴倾斜范围",
+        "cAxis": "C轴旋转",
+        "tableSize": "工作台尺寸",
+        "maxLoad": "最大工作台承重",
+        "spindleSpeed": "主轴转速",
+        "spindleTaper": "主轴锥度",
+        "toolMagazine": "刀库容量",
+        "rapidTraverse": "快速移动",
+        "positioning": "定位精度",
+        "repeatability": "重复精度",
+        "control": "数控系统"
+      },
+      "specValues": {
+        "axisTravel": "700 × 600 × 500 mm",
+        "bAxis": "±110°",
+        "cAxis": "360° 连续",
+        "tableSize": "Ø500 mm",
+        "maxLoad": "400 kg",
+        "spindleSpeed": "24,000 rpm",
+        "spindleTaper": "HSK-A63",
+        "toolMagazine": "32 / 60 刀位",
+        "rapidTraverse": "60 m/min",
+        "positioning": "±0.003 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 840D sl / Heidenhain TNC 640"
+      },
+      "certifications": "认证与标准",
+      "certs": "ISO 9001:2015 认证。VDI 3441 几何精度测试。CE 合规。",
+      "features": "核心特性",
+      "feature1": "热对称龙门结构，刚度最大化",
+      "feature2": "B、C旋转轴采用直驱力矩电机",
+      "feature3": "全线性轴光栅尺反馈",
+      "feature4": "机内测头与刀具测量系统"
+    },
+    "hps": {
+      "name": "HPS 系列",
+      "tag": "精密",
+      "desc": "高速三轴立式加工中心。42,000 rpm 主轴，德国标准铸铁结构。",
+      "heroTitle": "HPS 系列 – 高速精密立式",
+      "heroDesc": "42,000 rpm 高速主轴。德国标准铸铁床身。适用于精密模具、医疗器械和高速轻金属切削。",
+      "specs": {
+        "title": "技术规格",
+        "table": "HPS1000",
+        "axisTravel": "行程 (X/Y/Z)",
+        "tableSize": "工作台尺寸",
+        "maxLoad": "最大工作台承重",
+        "spindleSpeed": "主轴转速",
+        "spindleTaper": "主轴锥度",
+        "toolMagazine": "刀库容量",
+        "rapidTraverse": "快速移动",
+        "positioning": "定位精度",
+        "repeatability": "重复精度",
+        "control": "数控系统"
+      },
+      "specValues": {
+        "axisTravel": "1000 × 600 × 550 mm",
+        "tableSize": "1200 × 550 mm",
+        "maxLoad": "800 kg",
+        "spindleSpeed": "42,000 rpm",
+        "spindleTaper": "HSK-E40",
+        "toolMagazine": "24 / 30 刀位",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.005 mm",
+        "repeatability": "±0.003 mm",
+        "control": "Siemens 828D / Fanuc 31i-B5"
+      }
+    },
+    "scroll": {
+      "name": "WX 系列",
+      "tag": "专用",
+      "desc": "超精密涡旋压缩机专用机。专为电动汽车压缩机涡盘制造而设计。",
+      "heroTitle": "WX 系列 – 涡旋压缩机专家",
+      "heroDesc": "专为涡旋压缩机盘加工而设计。针对电动汽车压缩机及暖通空调涡旋制造优化，具有超精密表面加工能力。",
+      "specs": {
+        "title": "技术规格",
+        "table": "WX1",
+        "axisTravel": "行程 (X/Y/Z)",
+        "tableSize": "工作台尺寸",
+        "maxLoad": "最大工作台承重",
+        "spindleSpeed": "主轴转速",
+        "spindleTaper": "主轴锥度",
+        "toolMagazine": "刀库容量",
+        "rapidTraverse": "快速移动",
+        "positioning": "定位精度",
+        "repeatability": "重复精度",
+        "control": "数控系统"
+      },
+      "specValues": {
+        "axisTravel": "650 × 500 × 450 mm",
+        "tableSize": "700 × 420 mm",
+        "maxLoad": "300 kg",
+        "spindleSpeed": "36,000 rpm",
+        "spindleTaper": "HSK-E50",
+        "toolMagazine": "20 刀位",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0.004 mm",
+        "repeatability": "±0.002 mm",
+        "control": "Siemens 828D / Fanuc 31i-B"
+      }
+    },
+    "backToProducts": "← 返回所有产品",
+    "imageAlt": "{series} 加工中心"
+  },
+  "industries": {
+    "title": "服务行业",
+    "subtitle": "我们的设备服务于各关键领域的精密制造",
+    "backToProducts": "探索兼容产品 →",
+    "cards": {
+      "aerospace": {
+        "name": "航空航天",
+        "desc": "涡轮叶片、结构件和起落架零件的五轴加工，材料包括钛合金和因康镍合金。"
+      },
+      "defense": {
+        "name": "国防与船舶",
+        "desc": "雷达系统、舰船推进和装甲车辆制造的高精度零部件加工。"
+      },
+      "automotive": {
+        "name": "汽车制造",
+        "desc": "电动汽车电机壳体、变速器零部件和大批量精密零件制造。"
+      },
+      "medical": {
+        "name": "医疗器械",
+        "desc": "手术器械、骨科植入物和牙科修复体的 ISO 13485 级表面加工。"
+      },
+      "molds": {
+        "name": "精密模具",
+        "desc": "注塑模具、压铸模具和冲压模具的亚微米级表面质量加工。"
+      },
+      "compressor": {
+        "name": "压缩机",
+        "desc": "电动汽车热管理和暖通空调系统的涡旋压缩机动静盘及壳体加工。"
+      },
+      "energy": {
+        "name": "能源",
+        "desc": "涡轮部件、泵壳及石油、天然气和可再生能源的精密零件加工。"
+      }
+    }
+  },
+  "about": {
+    "title": "关于 DENIXE",
+    "subtitle": "源自苏州的德国标准精密工程",
+    "story": {
+      "title": "我们的故事",
+      "p1": "2010年创立于苏州工业园区，DENIXE 数控科技有限公司致力于推进高端数控加工中心技术的发展。",
+      "p2": "拥有30余项专利和 ISO 9001:2015 认证，我们的设备满足 VDI 3441 几何精度标准——与德国机床制造商相同的基准。",
+      "p3": "我们的工程团队汇聚了来自领先机床企业的数十年经验，将德国设计理念与苏州世界级制造生态相结合。"
+    },
+    "timeline": {
+      "title": "发展里程碑",
+      "items": [
+        {"year": "2010", "event": "公司在苏州工业园区成立"},
+        {"year": "2013", "event": "首台五轴加工中心原型机"},
+        {"year": "2015", "event": "获得 ISO 9001:2015 认证"},
+        {"year": "2017", "event": "推出 DNX 五轴系列"},
+        {"year": "2019", "event": "专利突破 20 项"},
+        {"year": "2021", "event": "发布 HPS 高速系列"},
+        {"year": "2023", "event": "推出 WX 涡旋压缩机专机"},
+        {"year": "2025", "event": "30+ 项专利，拓展全球市场"}
+      ]
+    },
+    "stats": {
+      "patents": "专利",
+      "iso": "ISO 认证",
+      "years": "年经验",
+      "vdi": "VDI 3441 测试"
+    },
+    "location": {
+      "title": "苏州工业园区",
+      "desc": "位于中国最先进的制造区之一，我们的工厂受益于世界级供应链和深厚的精密工程人才储备。"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "与我们的工程团队取得联系",
+    "form": {
+      "name": "您的姓名",
+      "email": "电子邮箱",
+      "company": "公司名称",
+      "phone": "电话（选填）",
+      "message": "您的留言",
+      "submit": "发送消息",
+      "submitting": "发送中...",
+      "success": "谢谢！我们将在24小时内回复。",
+      "error": "发送失败，请重试。"
+    },
+    "info": {
+      "title": "公司信息",
+      "company": "苏州上金数控科技有限公司",
+      "address": "中国江苏省苏州市工业园区",
+      "phone": "0512-62969605",
+      "email": "info@denixe.com",
+      "hours": "周一至周五，08:00–17:30（北京时间）"
+    }
+  },
+  "footer": {
+    "company": "苏州上金数控科技有限公司",
+    "address": "中国江苏省苏州市工业园区",
+    "phone": "0512-62969605",
+    "copyright": "© 2026 DENIXE"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "中文",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "fr": "Français"
+  }
+}

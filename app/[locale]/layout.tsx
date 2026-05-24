@@ -8,7 +8,8 @@ import Footer from '@/components/layout/Footer';
 
 export default async function LocaleLayout({children,params}:{children:React.ReactNode;params:Promise<{locale:string}>}) {
   const {locale}=await params;
-  if(!routing.locales.includes(locale as 'en'|'zh')) notFound();
+  const validLocales=routing.locales as readonly string[];
+  if(!validLocales.includes(locale)) notFound();
   const messages=await getMessages();
   return (
     <html lang={locale}>

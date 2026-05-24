@@ -1,0 +1,294 @@
+{
+  "home": {
+    "hero": {
+      "title": "Precisione Senza Limiti",
+      "subtitle": "Centri di Lavoro CNC a 5 Assi",
+      "cta": "Esplora i Prodotti"
+    },
+    "precision": {
+      "title": "Precisione a 2 Micron",
+      "locate": "Accuratezza di Posizionamento",
+      "repeat": "Ripetibilità",
+      "spindle": "Max Giri Mandrino"
+    },
+    "products": {
+      "title": "Linee di Prodotto",
+      "subtitle": "Tre serie di precisione",
+      "dnx": "Fresatura ad Alta Velocità a 5 Assi",
+      "hps": "Verticale di Precisione ad Alta Velocità",
+      "scroll": "Specialisti Compressori Scroll"
+    },
+    "nav": {
+      "products": "Prodotti",
+      "industries": "Settori",
+      "about": "Chi Siamo",
+      "contact": "Contatti"
+    },
+    "about": {
+      "title": "14 Anni di Precisione",
+      "desc": "Fondata nel 2010 nel Parco Industriale di Suzhou, DENIXE fornisce centri di lavoro CNC che sostituiscono le importazioni tedesche, svizzere e giapponesi a prezzi competitivi."
+    },
+    "footer": {
+      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+      "address": "Parco Industriale di Suzhou, Jiangsu, Cina",
+      "phone": "+86-512-62969605",
+      "copyright": "© 2026 DENIXE"
+    }
+  },
+  "nav": {
+    "products": "Prodotti",
+    "industries": "Settori",
+    "about": "Chi Siamo",
+    "contact": "Contatti"
+  },
+  "products": {
+    "title": "Centri di Lavoro di Precisione",
+    "subtitle": "Esplora la nostra gamma completa di soluzioni di lavorazione CNC",
+    "learnMore": "Scopri di più",
+    "viewSpecs": "Vedi specifiche",
+    "dnx": {
+      "name": "Serie DNX",
+      "tag": "Ammiraglia",
+      "desc": "Centro di lavoro simultaneo a 5 assi. Asse B ±110°, asse C 360°. Certificato VDI 3441.",
+      "heroTitle": "Serie DNX – Lavorazione Simultanea a 5 Assi",
+      "heroDesc": "Asse B ±110°, asse C 360°. Ripetibilità certificata VDI 3441 ±0,002 mm. Per applicazioni complesse aerospaziali, difesa e stampi.",
+      "specs": {
+        "title": "Specifiche Tecniche",
+        "table": "DNX700U",
+        "axisTravel": "Corsa Assi (X/Y/Z)",
+        "bAxis": "Inclinazione Asse B",
+        "cAxis": "Rotazione Asse C",
+        "tableSize": "Dim. Tavola",
+        "maxLoad": "Carico Max Tavola",
+        "spindleSpeed": "Velocità Mandrino",
+        "spindleTaper": "Attacco Mandrino",
+        "toolMagazine": "Capacità Magazzino",
+        "rapidTraverse": "Avanzamento Rapido",
+        "positioning": "Accuratezza Posizionamento",
+        "repeatability": "Ripetibilità",
+        "control": "CNC"
+      },
+      "specValues": {
+        "axisTravel": "700 × 600 × 500 mm",
+        "bAxis": "±110°",
+        "cAxis": "360° continuo",
+        "tableSize": "Ø500 mm",
+        "maxLoad": "400 kg",
+        "spindleSpeed": "24.000 giri/min",
+        "spindleTaper": "HSK-A63",
+        "toolMagazine": "32 / 60 utensili",
+        "rapidTraverse": "60 m/min",
+        "positioning": "±0,003 mm",
+        "repeatability": "±0,002 mm",
+        "control": "Siemens 840D sl / Heidenhain TNC 640"
+      },
+      "certifications": "Certificazioni",
+      "certs": "ISO 9001:2015 certificato. VDI 3441 testato. Conforme CE.",
+      "features": "Caratteristiche",
+      "feature1": "Design a portale termicamente simmetrico",
+      "feature2": "Motori torque a trasmissione diretta su B e C",
+      "feature3": "Feedback a riga ottica su tutti gli assi",
+      "feature4": "Sistema di tastatura e misurazione utensili"
+    },
+    "hps": {
+      "name": "Serie HPS",
+      "tag": "Precisione",
+      "desc": "Verticale 3 assi ad alta velocità. Mandrino 42.000 giri/min.",
+      "heroTitle": "Serie HPS – Verticale di Precisione",
+      "heroDesc": "Mandrino 42.000 giri/min. Bancale in ghisa standard tedesco. Per stampi, medicale e metalli leggeri.",
+      "specs": {
+        "title": "Specifiche Tecniche",
+        "table": "HPS1000",
+        "axisTravel": "Corsa Assi (X/Y/Z)",
+        "tableSize": "Dim. Tavola",
+        "maxLoad": "Carico Max Tavola",
+        "spindleSpeed": "Velocità Mandrino",
+        "spindleTaper": "Attacco Mandrino",
+        "toolMagazine": "Capacità Magazzino",
+        "rapidTraverse": "Avanzamento Rapido",
+        "positioning": "Accuratezza Posizionamento",
+        "repeatability": "Ripetibilità",
+        "control": "CNC"
+      },
+      "specValues": {
+        "axisTravel": "1000 × 600 × 550 mm",
+        "tableSize": "1200 × 550 mm",
+        "maxLoad": "800 kg",
+        "spindleSpeed": "42.000 giri/min",
+        "spindleTaper": "HSK-E40",
+        "toolMagazine": "24 / 30 utensili",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0,005 mm",
+        "repeatability": "±0,003 mm",
+        "control": "Siemens 828D / Fanuc 31i-B5"
+      }
+    },
+    "scroll": {
+      "name": "Serie WX",
+      "tag": "Specializzata",
+      "desc": "Macchina speciale per compressori scroll. Per produzione EV.",
+      "heroTitle": "Serie WX – Specialisti Compressori Scroll",
+      "heroDesc": "Progettata per dischi compressori scroll. Ottimizzata per EV e HVAC con finitura ultra-precisa.",
+      "specs": {
+        "title": "Specifiche Tecniche",
+        "table": "WX1",
+        "axisTravel": "Corsa Assi (X/Y/Z)",
+        "tableSize": "Dim. Tavola",
+        "maxLoad": "Carico Max Tavola",
+        "spindleSpeed": "Velocità Mandrino",
+        "spindleTaper": "Attacco Mandrino",
+        "toolMagazine": "Capacità Magazzino",
+        "rapidTraverse": "Avanzamento Rapido",
+        "positioning": "Accuratezza Posizionamento",
+        "repeatability": "Ripetibilità",
+        "control": "CNC"
+      },
+      "specValues": {
+        "axisTravel": "650 × 500 × 450 mm",
+        "tableSize": "700 × 420 mm",
+        "maxLoad": "300 kg",
+        "spindleSpeed": "36.000 giri/min",
+        "spindleTaper": "HSK-E50",
+        "toolMagazine": "20 utensili",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0,004 mm",
+        "repeatability": "±0,002 mm",
+        "control": "Siemens 828D / Fanuc 31i-B"
+      }
+    },
+    "backToProducts": "← Torna ai prodotti",
+    "imageAlt": "{series} centro di lavoro"
+  },
+  "industries": {
+    "title": "Settori Serviti",
+    "subtitle": "Le nostre macchine per la produzione di precisione",
+    "backToProducts": "Esplora prodotti →",
+    "cards": {
+      "aerospace": {
+        "name": "Aerospaziale",
+        "desc": "Lavorazione 5 assi di pale turbine, strutture e carrelli in titanio e Inconel."
+      },
+      "defense": {
+        "name": "Difesa e Marina",
+        "desc": "Componenti per radar, propulsione navale e veicoli blindati."
+      },
+      "automotive": {
+        "name": "Automotive",
+        "desc": "Alloggiamenti motori EV, trasmissioni e produzione in grandi volumi."
+      },
+      "medical": {
+        "name": "Dispositivi Medici",
+        "desc": "Strumenti chirurgici, impianti ortopedici e protesi dentali."
+      },
+      "molds": {
+        "name": "Stampi di Precisione",
+        "desc": "Stampi a iniezione, pressofusione e tranciatura."
+      },
+      "compressor": {
+        "name": "Compressori",
+        "desc": "Dischi scroll e alloggiamenti per EV e HVAC."
+      },
+      "energy": {
+        "name": "Energia",
+        "desc": "Componenti per turbine, pompe e energie rinnovabili."
+      }
+    }
+  },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "Ingegneria di precisione tedesca da Suzhou",
+    "story": {
+      "title": "La Nostra Storia",
+      "p1": "Fondata nel 2010 a Suzhou, DENIXE sviluppa centri di lavoro CNC di alta gamma.",
+      "p2": "Con oltre 30 brevetti e certificazione ISO 9001:2015, le nostre macchine soddisfano gli standard VDI 3441.",
+      "p3": "Il nostro team unisce decenni di esperienza dai principali costruttori di macchine utensili."
+    },
+    "timeline": {
+      "title": "Pietre Miliari",
+      "items": [
+        {
+          "year": "2010",
+          "event": "Fondazione a Suzhou Industrial Park"
+        },
+        {
+          "year": "2013",
+          "event": "Primo prototipo 5 assi"
+        },
+        {
+          "year": "2015",
+          "event": "Certificazione ISO 9001:2015"
+        },
+        {
+          "year": "2017",
+          "event": "Lancio serie DNX 5 assi"
+        },
+        {
+          "year": "2019",
+          "event": "Superati 20 brevetti"
+        },
+        {
+          "year": "2021",
+          "event": "Lancio serie HPS"
+        },
+        {
+          "year": "2023",
+          "event": "Lancio specialista scroll WX"
+        },
+        {
+          "year": "2025",
+          "event": "30+ brevetti, espansione globale"
+        }
+      ]
+    },
+    "stats": {
+      "patents": "Brevetti",
+      "iso": "Certificato ISO",
+      "years": "Anni Esperienza",
+      "vdi": "Testato VDI 3441"
+    },
+    "location": {
+      "title": "Parco Industriale di Suzhou",
+      "desc": "Situato in una delle zone manifatturiere più avanzate della Cina."
+    }
+  },
+  "contact": {
+    "title": "Contatti",
+    "subtitle": "Contatta il nostro team di ingegneria",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "company": "Azienda",
+      "phone": "Telefono",
+      "message": "Messaggio",
+      "submit": "Invia",
+      "submitting": "Invio...",
+      "success": "Grazie! Risponderemo entro 24 ore.",
+      "error": "Errore. Riprova."
+    },
+    "info": {
+      "title": "Info Aziendali",
+      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+      "address": "Parco Industriale di Suzhou, Jiangsu, Cina",
+      "phone": "+86-512-62969605",
+      "email": "info@denixe.com",
+      "hours": "Lun–Ven, 08:00–17:30 (CST)"
+    }
+  },
+  "footer": {
+    "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+    "address": "Parco Industriale di Suzhou, Jiangsu, Cina",
+    "phone": "+86-512-62969605",
+    "copyright": "© 2026 DENIXE"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "中文",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "fr": "Français"
+  }
+}

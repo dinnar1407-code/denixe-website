@@ -1,0 +1,270 @@
+{
+  "home": {
+    "hero": {
+      "title": "Präzision ohne Grenzen",
+      "subtitle": "5-Achs-CNC-Bearbeitungszentren",
+      "cta": "Produkte entdecken"
+    },
+    "precision": {
+      "title": "Auf 2 Mikrometer genau",
+      "locate": "Positioniergenauigkeit",
+      "repeat": "Wiederholgenauigkeit",
+      "spindle": "Max. Spindeldrehzahl"
+    },
+    "products": {
+      "title": "Produktlinien",
+      "subtitle": "Drei Präzisionsserien",
+      "dnx": "5-Achs-Hochgeschwindigkeitsfräsen",
+      "hps": "Hochgeschwindigkeits-Präzisions-Vertikal",
+      "scroll": "Scrollverdichter-Spezialisten"
+    },
+    "nav": {
+      "products": "Produkte",
+      "industries": "Branchen",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "about": {
+      "title": "14 Jahre Präzision",
+      "desc": "2010 im Suzhou Industrial Park gegründet, liefert DENIXE CNC-Bearbeitungszentren, die deutsche, schweizerische und japanische Importe zu wettbewerbsfähigen Preisen ersetzen."
+    },
+    "footer": {
+      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+      "address": "Suzhou Industrial Park, Jiangsu, China",
+      "phone": "+86-512-62969605",
+      "copyright": "© 2026 DENIXE"
+    }
+  },
+  "nav": {
+    "products": "Produkte",
+    "industries": "Branchen",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "products": {
+    "title": "Präzisionsbearbeitungszentren",
+    "subtitle": "Entdecken Sie unser komplettes Sortiment an CNC-Bearbeitungslösungen",
+    "learnMore": "Mehr erfahren",
+    "viewSpecs": "Spezifikationen anzeigen",
+    "dnx": {
+      "name": "DNX Serie",
+      "tag": "Flaggschiff",
+      "desc": "5-Achs-Simultanbearbeitungszentrum. B-Achse ±110°, C-Achse 360°. VDI 3441 zertifiziert.",
+      "heroTitle": "DNX Serie – 5-Achs-Simultanbearbeitung",
+      "heroDesc": "B-Achse ±110° Schwenkung, C-Achse 360° Rotation. VDI 3441 zertifiziert ±0,002 mm Wiederholgenauigkeit. Für komplexe Luftfahrt-, Verteidigungs- und Präzisionsformanwendungen.",
+      "specs": {
+        "title": "Technische Spezifikationen",
+        "table": "DNX700U",
+        "axisTravel": "Verfahrweg (X/Y/Z)",
+        "bAxis": "B-Achse Schwenkbereich",
+        "cAxis": "C-Achse Rotation",
+        "tableSize": "Tischgröße",
+        "maxLoad": "Max. Tischbelastung",
+        "spindleSpeed": "Spindeldrehzahl",
+        "spindleTaper": "Spindelaufnahme",
+        "toolMagazine": "Werkzeugmagazin-Kapazität",
+        "rapidTraverse": "Eilgang",
+        "positioning": "Positioniergenauigkeit",
+        "repeatability": "Wiederholgenauigkeit",
+        "control": "CNC-Steuerung"
+      },
+      "specValues": {
+        "axisTravel": "700 × 600 × 500 mm",
+        "bAxis": "±110°",
+        "cAxis": "360° kontinuierlich",
+        "tableSize": "Ø500 mm",
+        "maxLoad": "400 kg",
+        "spindleSpeed": "24.000 U/min",
+        "spindleTaper": "HSK-A63",
+        "toolMagazine": "32 / 60 Werkzeuge",
+        "rapidTraverse": "60 m/min",
+        "positioning": "±0,003 mm",
+        "repeatability": "±0,002 mm",
+        "control": "Siemens 840D sl / Heidenhain TNC 640"
+      },
+      "certifications": "Zertifizierungen & Standards",
+      "certs": "ISO 9001:2015 zertifiziert. VDI 3441 geometrische Genauigkeit geprüft. CE-konform.",
+      "features": "Hauptmerkmale",
+      "feature1": "Thermosymmetrisches Portaldesign für maximale Steifigkeit",
+      "feature2": "Direktantriebs-Torquemotoren an B- und C-Rundachsen",
+      "feature3": "Linearmaßstab-Rückmeldung an allen Linearachsen",
+      "feature4": "Maschineninterne Mess- und Werkzeugvermessung"
+    },
+    "hps": {
+      "name": "HPS Serie",
+      "tag": "Präzision",
+      "desc": "Hochgeschwindigkeits-3-Achs-Vertikalbearbeitungszentrum. 42.000 U/min Spindel, deutsche Gusskonstruktion.",
+      "heroTitle": "HPS Serie – Hochgeschwindigkeits-Präzisions-Vertikal",
+      "heroDesc": "42.000 U/min Hochgeschwindigkeitsspindel. Graugussbett nach deutscher Norm. Ideal für Präzisionsformen, Medizintechnik und Hochgeschwindigkeits-Leichtmetallbearbeitung.",
+      "specs": {
+        "title": "Technische Spezifikationen",
+        "table": "HPS1000",
+        "axisTravel": "Verfahrweg (X/Y/Z)",
+        "tableSize": "Tischgröße",
+        "maxLoad": "Max. Tischbelastung",
+        "spindleSpeed": "Spindeldrehzahl",
+        "spindleTaper": "Spindelaufnahme",
+        "toolMagazine": "Werkzeugmagazin-Kapazität",
+        "rapidTraverse": "Eilgang",
+        "positioning": "Positioniergenauigkeit",
+        "repeatability": "Wiederholgenauigkeit",
+        "control": "CNC-Steuerung"
+      },
+      "specValues": {
+        "axisTravel": "1000 × 600 × 550 mm",
+        "tableSize": "1200 × 550 mm",
+        "maxLoad": "800 kg",
+        "spindleSpeed": "42.000 U/min",
+        "spindleTaper": "HSK-E40",
+        "toolMagazine": "24 / 30 Werkzeuge",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0,005 mm",
+        "repeatability": "±0,003 mm",
+        "control": "Siemens 828D / Fanuc 31i-B5"
+      }
+    },
+    "scroll": {
+      "name": "WX Serie",
+      "tag": "Spezialisiert",
+      "desc": "Ultrapräzise Scrollverdichter-Spezialmaschine. Für die EV-Verdichterspiralscheibenfertigung entwickelt.",
+      "heroTitle": "WX Serie – Scrollverdichter-Spezialisten",
+      "heroDesc": "Speziell für die Bearbeitung von Scrollverdichterscheiben entwickelt. Optimiert für EV-Verdichter- und HVAC-Scrollfertigung mit ultrapräziser Oberflächenbearbeitung.",
+      "specs": {
+        "title": "Technische Spezifikationen",
+        "table": "WX1",
+        "axisTravel": "Verfahrweg (X/Y/Z)",
+        "tableSize": "Tischgröße",
+        "maxLoad": "Max. Tischbelastung",
+        "spindleSpeed": "Spindeldrehzahl",
+        "spindleTaper": "Spindelaufnahme",
+        "toolMagazine": "Werkzeugmagazin-Kapazität",
+        "rapidTraverse": "Eilgang",
+        "positioning": "Positioniergenauigkeit",
+        "repeatability": "Wiederholgenauigkeit",
+        "control": "CNC-Steuerung"
+      },
+      "specValues": {
+        "axisTravel": "650 × 500 × 450 mm",
+        "tableSize": "700 × 420 mm",
+        "maxLoad": "300 kg",
+        "spindleSpeed": "36.000 U/min",
+        "spindleTaper": "HSK-E50",
+        "toolMagazine": "20 Werkzeuge",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0,004 mm",
+        "repeatability": "±0,002 mm",
+        "control": "Siemens 828D / Fanuc 31i-B"
+      }
+    },
+    "backToProducts": "← Zurück zu allen Produkten",
+    "imageAlt": "{series} Bearbeitungszentrum"
+  },
+  "industries": {
+    "title": "Branchen",
+    "subtitle": "Unsere Maschinen ermöglichen Präzisionsfertigung in kritischen Sektoren",
+    "backToProducts": "Kompatible Produkte entdecken →",
+    "cards": {
+      "aerospace": {
+        "name": "Luftfahrt",
+        "desc": "5-Achs-Bearbeitung von Turbinenschaufeln, Strukturbauteilen und Fahrwerksteilen aus Titan und Inconel."
+      },
+      "defense": {
+        "name": "Verteidigung & Marine",
+        "desc": "Hochpräzise Komponenten für Radarsysteme, Schiffsantriebe und gepanzerte Fahrzeuge."
+      },
+      "automotive": {
+        "name": "Automobil",
+        "desc": "EV-Motorgehäuse, Getriebekomponenten und Hochvolumen-Präzisionsteilefertigung."
+      },
+      "medical": {
+        "name": "Medizintechnik",
+        "desc": "Chirurgische Instrumente, orthopädische Implantate und Dentalprothetik mit ISO 13485-Oberflächengüte."
+      },
+      "molds": {
+        "name": "Präzisionsformen",
+        "desc": "Spritzguss-, Druckguss- und Stanzwerkzeuge mit Submikron-Oberflächenqualität."
+      },
+      "compressor": {
+        "name": "Verdichter",
+        "desc": "Scrollverdichterscheiben und -gehäuse für EV-Thermomanagement und HVAC-Systeme."
+      },
+      "energy": {
+        "name": "Energie",
+        "desc": "Turbinenkomponenten, Pumpengehäuse und Präzisionsteile für Öl, Gas und erneuerbare Energien."
+      }
+    }
+  },
+  "about": {
+    "title": "Über DENIXE",
+    "subtitle": "Deutsche Präzisionstechnik aus Suzhou, China",
+    "story": {
+      "title": "Unsere Geschichte",
+      "p1": "2010 im Suzhou Industrial Park gegründet, widmet sich DENIXE CNC Technology Co., Ltd. der Weiterentwicklung von High-End-CNC-Bearbeitungszentren.",
+      "p2": "Mit über 30 Patenten und ISO 9001:2015-Zertifizierung erfüllen unsere Maschinen die VDI 3441-Normen für geometrische Genauigkeit – dieselben Standards, die deutsche Werkzeugmaschinenbauer anwenden.",
+      "p3": "Unser Ingenieurteam bringt jahrzehntelange Erfahrung von führenden Werkzeugmaschinenherstellern mit und verbindet deutsche Designphilosophie mit dem erstklassigen Fertigungsökosystem von Suzhou."
+    },
+    "timeline": {
+      "title": "Meilensteine",
+      "items": [
+        {"year": "2010", "event": "Unternehmensgründung im Suzhou Industrial Park"},
+        {"year": "2013", "event": "Erster 5-Achs-Bearbeitungszentrum-Prototyp"},
+        {"year": "2015", "event": "ISO 9001:2015-Zertifizierung"},
+        {"year": "2017", "event": "Markteinführung der DNX 5-Achs-Serie"},
+        {"year": "2019", "event": "Über 20 Patente"},
+        {"year": "2021", "event": "Einführung der HPS Hochgeschwindigkeitsserie"},
+        {"year": "2023", "event": "Marktstart des WX Scrollverdichter-Spezialisten"},
+        {"year": "2025", "event": "30+ Patente, globale Expansion"}
+      ]
+    },
+    "stats": {
+      "patents": "Patente",
+      "iso": "ISO-zertifiziert",
+      "years": "Jahre Erfahrung",
+      "vdi": "VDI 3441 geprüft"
+    },
+    "location": {
+      "title": "Suzhou Industrial Park",
+      "desc": "In einer der fortschrittlichsten Fertigungszonen Chinas gelegen, profitiert unser Werk von erstklassigen Lieferketten und einem tiefen Talentpool an Präzisionstechnik-Expertise."
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Nehmen Sie Kontakt mit unserem Ingenieurteam auf",
+    "form": {
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "company": "Unternehmen",
+      "phone": "Telefon (optional)",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "success": "Vielen Dank! Wir antworten innerhalb von 24 Stunden.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "title": "Unternehmensinformationen",
+      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+      "address": "Suzhou Industrial Park, Provinz Jiangsu, China",
+      "phone": "+86-512-62969605",
+      "email": "info@denixe.com",
+      "hours": "Mo–Fr, 08:00–17:30 (CST)"
+    }
+  },
+  "footer": {
+    "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+    "address": "Suzhou Industrial Park, Jiangsu, China",
+    "phone": "+86-512-62969605",
+    "copyright": "© 2026 DENIXE"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "中文",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "fr": "Français"
+  }
+}

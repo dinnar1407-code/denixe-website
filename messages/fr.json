@@ -1,0 +1,294 @@
+{
+  "home": {
+    "hero": {
+      "title": "Précision Sans Limites",
+      "subtitle": "Centres d'Usinage CNC 5 Axes",
+      "cta": "Découvrir les Produits"
+    },
+    "precision": {
+      "title": "Précision à 2 Microns",
+      "locate": "Précision de Positionnement",
+      "repeat": "Répétabilité",
+      "spindle": "Régime Max Broche"
+    },
+    "products": {
+      "title": "Gammes de Produits",
+      "subtitle": "Trois séries de précision",
+      "dnx": "Fraisage 5 Axes Grande Vitesse",
+      "hps": "Vertical de Précision Grande Vitesse",
+      "scroll": "Spécialistes Compresseurs Scroll"
+    },
+    "nav": {
+      "products": "Products",
+      "industries": "Industries",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "about": {
+      "title": "14 Ans de Précision",
+      "desc": "Fondée en 2010 dans le Parc Industriel de Suzhou. Remplace les importations allemandes, suisses et japonaises à prix compétitifs."
+    },
+    "footer": {
+      "company": "Suzhou Shangjin CNC Technology Co., Ltd.",
+      "address": "Parc Industriel de Suzhou, Jiangsu, Chine",
+      "phone": "+86-512-62969605",
+      "copyright": "© 2026 DENIXE"
+    }
+  },
+  "nav": {
+    "products": "Produits",
+    "industries": "Secteurs",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "products": {
+    "title": "Centres d'Usinage de Précision",
+    "subtitle": "Solutions complètes d'usinage CNC",
+    "learnMore": "En savoir plus",
+    "viewSpecs": "Voir spécifications",
+    "dnx": {
+      "name": "Série DNX",
+      "tag": "Phare",
+      "desc": "Centre d'usinage simultané 5 axes. Axe B ±110°, C 360°. Certifié VDI 3441.",
+      "heroTitle": "Série DNX – Usinage Simultané 5 Axes",
+      "heroDesc": "Axe B ±110°, C 360°. VDI 3441 ±0,002 mm répétabilité. Applications aérospatiales et défense.",
+      "specs": {
+        "title": "Spécifications Techniques",
+        "table": "DNX700U",
+        "axisTravel": "Course (X/Y/Z)",
+        "bAxis": "Plage Basculement B",
+        "cAxis": "Rotation C",
+        "tableSize": "Dimensions Table",
+        "maxLoad": "Charge Max",
+        "spindleSpeed": "Vitesse Broche",
+        "spindleTaper": "Cône Broche",
+        "toolMagazine": "Capacité Magasin",
+        "rapidTraverse": "Avance Rapide",
+        "positioning": "Précision Positionnement",
+        "repeatability": "Répétabilité",
+        "control": "Commande CNC"
+      },
+      "specValues": {
+        "axisTravel": "700 × 600 × 500 mm",
+        "bAxis": "±110°",
+        "cAxis": "360° continu",
+        "tableSize": "Ø500 mm",
+        "maxLoad": "400 kg",
+        "spindleSpeed": "24 000 tr/min",
+        "spindleTaper": "HSK-A63",
+        "toolMagazine": "32 / 60 outils",
+        "rapidTraverse": "60 m/min",
+        "positioning": "±0,003 mm",
+        "repeatability": "±0,002 mm",
+        "control": "Siemens 840D sl / Heidenhain TNC 640"
+      },
+      "certifications": "Certifications",
+      "certs": "ISO 9001:2015. VDI 3441. Conforme CE.",
+      "features": "Caractéristiques",
+      "feature1": "Conception portique thermosymétrique",
+      "feature2": "Moteurs couple directs sur axes B et C",
+      "feature3": "Feedback par règle linéaire",
+      "feature4": "Palpage et mesure en machine"
+    },
+    "hps": {
+      "name": "Série HPS",
+      "tag": "Précision",
+      "desc": "Vertical 3 axes grande vitesse. Broche 42 000 tr/min. Construction fonte standard allemand.",
+      "heroTitle": "Série HPS – Vertical de Précision",
+      "heroDesc": "Broche 42 000 tr/min. Bâti en fonte. Moules de précision et dispositifs médicaux.",
+      "specs": {
+        "title": "Spécifications Techniques",
+        "table": "HPS1000",
+        "axisTravel": "Course (X/Y/Z)",
+        "tableSize": "Dim. Table",
+        "maxLoad": "Charge Max",
+        "spindleSpeed": "Vitesse Broche",
+        "spindleTaper": "Cône",
+        "toolMagazine": "Magasin",
+        "rapidTraverse": "Avance Rapide",
+        "positioning": "Précision",
+        "repeatability": "Répétabilité",
+        "control": "CNC"
+      },
+      "specValues": {
+        "axisTravel": "1000 × 600 × 550 mm",
+        "tableSize": "1200 × 550 mm",
+        "maxLoad": "800 kg",
+        "spindleSpeed": "42 000 tr/min",
+        "spindleTaper": "HSK-E40",
+        "toolMagazine": "24 / 30",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0,005 mm",
+        "repeatability": "±0,003 mm",
+        "control": "Siemens 828D / Fanuc 31i-B5"
+      }
+    },
+    "scroll": {
+      "name": "Série WX",
+      "tag": "Spécialisée",
+      "desc": "Machine spéciale compresseurs scroll. Pour fabrication de disques EV.",
+      "heroTitle": "Série WX – Spécialistes Scroll",
+      "heroDesc": "Conçue pour l'usinage de disques scroll. Optimisée EV et HVAC.",
+      "specs": {
+        "title": "Spécifications Techniques",
+        "table": "WX1",
+        "axisTravel": "Course (X/Y/Z)",
+        "tableSize": "Dim. Table",
+        "maxLoad": "Charge Max",
+        "spindleSpeed": "Vitesse Broche",
+        "spindleTaper": "Cône",
+        "toolMagazine": "Magasin",
+        "rapidTraverse": "Avance Rapide",
+        "positioning": "Précision",
+        "repeatability": "Répétabilité",
+        "control": "CNC"
+      },
+      "specValues": {
+        "axisTravel": "650 × 500 × 450 mm",
+        "tableSize": "700 × 420 mm",
+        "maxLoad": "300 kg",
+        "spindleSpeed": "36 000 tr/min",
+        "spindleTaper": "HSK-E50",
+        "toolMagazine": "20",
+        "rapidTraverse": "48 m/min",
+        "positioning": "±0,004 mm",
+        "repeatability": "±0,002 mm",
+        "control": "Siemens 828D / Fanuc 31i-B"
+      }
+    },
+    "backToProducts": "← Retour aux produits",
+    "imageAlt": "Centre d'usinage {series}"
+  },
+  "industries": {
+    "title": "Secteurs d'Activité",
+    "subtitle": "Fabrication de précision dans les secteurs critiques",
+    "backToProducts": "Voir les produits →",
+    "cards": {
+      "aerospace": {
+        "name": "Aérospatial",
+        "desc": "Usinage 5 axes de pales de turbine et structures en titane et Inconel."
+      },
+      "defense": {
+        "name": "Défense et Marine",
+        "desc": "Composants haute précision pour radars et propulsion navale."
+      },
+      "automotive": {
+        "name": "Automobile",
+        "desc": "Carters moteurs EV, transmissions, pièces en grande série."
+      },
+      "medical": {
+        "name": "Dispositifs Médicaux",
+        "desc": "Instruments chirurgicaux, implants orthopédiques et prothèses dentaires."
+      },
+      "molds": {
+        "name": "Moules de Précision",
+        "desc": "Moules d'injection et fonderie qualité submicronique."
+      },
+      "compressor": {
+        "name": "Compresseurs",
+        "desc": "Disques scroll et carters pour EV et HVAC."
+      },
+      "energy": {
+        "name": "Énergie",
+        "desc": "Composants de turbines, pompes et énergies renouvelables."
+      }
+    }
+  },
+  "about": {
+    "title": "À Propos de DENIXE",
+    "subtitle": "Ingénierie de précision allemande de Suzhou",
+    "story": {
+      "title": "Notre Histoire",
+      "p1": "Fondée en 2010 au Parc Industriel de Suzhou. Dédiée aux centres d'usinage CNC haut de gamme.",
+      "p2": "30+ brevets, ISO 9001:2015, normes VDI 3441.",
+      "p3": "Philosophie allemande + écosystème manufacturier de Suzhou."
+    },
+    "timeline": {
+      "title": "Jalons",
+      "items": [
+        {
+          "year": "2010",
+          "event": "Fondation à Suzhou"
+        },
+        {
+          "year": "2013",
+          "event": "1er prototype 5 axes"
+        },
+        {
+          "year": "2015",
+          "event": "ISO 9001:2015"
+        },
+        {
+          "year": "2017",
+          "event": "Série DNX 5 axes"
+        },
+        {
+          "year": "2019",
+          "event": "20 brevets"
+        },
+        {
+          "year": "2021",
+          "event": "Série HPS"
+        },
+        {
+          "year": "2023",
+          "event": "Spécialiste WX"
+        },
+        {
+          "year": "2025",
+          "event": "30+ brevets, expansion mondiale"
+        }
+      ]
+    },
+    "stats": {
+      "patents": "Brevets",
+      "iso": "Certifié ISO",
+      "years": "Ans Expérience",
+      "vdi": "Testé VDI 3441"
+    },
+    "location": {
+      "title": "Parc Industriel de Suzhou",
+      "desc": "Une des zones manufacturières les plus avancées de Chine."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contactez notre équipe",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "company": "Entreprise",
+      "phone": "Téléphone (optionnel)",
+      "message": "Message",
+      "submit": "Envoyer",
+      "submitting": "Envoi...",
+      "success": "Merci ! Réponse sous 24h.",
+      "error": "Erreur. Réessayez."
+    },
+    "info": {
+      "title": "Informations",
+      "company": "Suzhou Shangjin CNC Technology",
+      "address": "Parc Industriel de Suzhou, Jiangsu, Chine",
+      "phone": "+86-512-62969605",
+      "email": "info@denixe.com",
+      "hours": "Lun–Ven, 08:00–17:30 (CST)"
+    }
+  },
+  "footer": {
+    "company": "Suzhou Shangjin CNC Technology",
+    "address": "Parc Industriel de Suzhou, Jiangsu, Chine",
+    "phone": "+86-512-62969605",
+    "copyright": "© 2026 DENIXE"
+  },
+  "locale": {
+    "en": "English",
+    "zh": "中文",
+    "de": "Deutsch",
+    "ja": "日本語",
+    "it": "Italiano",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "pt": "Português",
+    "fr": "Français"
+  }
+}
