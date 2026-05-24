@@ -65,7 +65,7 @@ function AnimatedText({ text, baseDelayMs }: { text: string; baseDelayMs?: numbe
    🎛️  TUNING PARAMETERS — change these numbers
    then run: npx next build && vercel --prod --yes
    ═══════════════════════════════════════════════ */
-const IMAGE_INITIAL_SCALE  = 1.5;    // matches card height
+const IMAGE_INITIAL_SCALE  = 0.8;    // card height with full view
 const IMAGE_MAX_SCALE      = 2.0;     // 2. 图片最大放大量 (1.5~4.0, 越大越近 = 局部细节)
 const IMAGE_SHIFT_X        = '-5%';  // 3. 图片水平偏移 (如 '-5%' 左移, '5%' 右移)
 const IMAGE_SHIFT_Y        = '-4%';  // 4. 图片垂直偏移 (如 '-4%' 上移, '4%' 下移)
