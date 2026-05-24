@@ -158,7 +158,7 @@ export default function HomePage() {
       {/* ── Feature Spotlight: Full-viewport parallax card ── */}
       <section ref={featureRef} className="pt-4 pb-16 md:pt-8 md:pb-20 bg-white">
         <motion.div
-          className="bg-[#191818] rounded-2xl flex flex-col md:flex-row"
+          className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
           style={{ marginLeft: cardMargin, marginRight: cardMargin, minHeight: `${CARD_MIN_HEIGHT}px` }}
         >
           {/* Left: text — compress then expand */}
@@ -183,10 +183,18 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 relative min-h-[640px] md:min-h-0">
+          <div className="flex-1 relative overflow-hidden min-h-[640px] md:min-h-0">
             <motion.div
-              className="absolute inset-0 w-full h-full"
-              style={{ scale: imageScale, x: imageX, y: imageY }}
+              className="absolute top-1/2 left-1/2"
+              style={{ 
+                width: '300%', 
+                height: '300%',
+                marginLeft: '-150%', 
+                marginTop: '-150%',
+                scale: imageScale, 
+                x: imageX, 
+                y: imageY 
+              }}
             >
               <Image
                 src="/images/products/dnx700u-realistic.webp"
