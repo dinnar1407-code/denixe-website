@@ -68,7 +68,7 @@ export default function HomePage() {
 
   // ── Card: from normal → fills screen
   // As you scroll down through this section, the card grows to fill more of the viewport
-  const cardScale = useTransform(scrollYProgress, [0, 0.55], [1, 1.25]);
+  const cardScale = useTransform(scrollYProgress, [0, 0.55], [1, 1.08]);
 
   // ── Image: starts small (showing the whole machine) → zooms in to detail
   // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
@@ -140,7 +140,7 @@ export default function HomePage() {
       <section ref={featureRef} className="py-16 md:py-20 bg-white">
         <motion.div
           className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
-          style={{ scale: cardScale, minHeight: '560px' }}
+          style={{ scale: cardScale, minHeight: '480px' }}
         >
           {/* Left: text — compress then expand */}
           <motion.div
