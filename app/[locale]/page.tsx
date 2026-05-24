@@ -65,7 +65,7 @@ function AnimatedText({ text, baseDelayMs }: { text: string; baseDelayMs?: numbe
    🎛️  TUNING PARAMETERS — change these numbers
    then run: npx next build && vercel --prod --yes
    ═══════════════════════════════════════════════ */
-const IMAGE_INITIAL_SCALE  = 0.25;   // starts showing full machine
+const IMAGE_INITIAL_SCALE  = 0.15;   // starts showing full machine
 const IMAGE_MAX_SCALE      = 2.0;     // zoom-in target (1.5~4.0)
 const IMAGE_SHIFT_X        = '-5%';  // 3. 图片水平偏移 (如 '-5%' 左移, '5%' 右移)
 const IMAGE_SHIFT_Y        = '-4%';  // 4. 图片垂直偏移 (如 '-4%' 上移, '4%' 下移)
@@ -87,7 +87,7 @@ export default function HomePage() {
 
   // ── Card: from normal → fills screen
   // As you scroll down through this section, the card grows to fill more of the viewport
-  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['12rem', '0rem']); // card expands to fill edges
+  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['16rem', '0rem']); // card expands to fill edges
 
   // ── Image: starts small (showing the whole machine) → zooms in to detail
   // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
