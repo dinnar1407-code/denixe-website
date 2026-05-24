@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useRef, useState, useCallback } from 'react';
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
@@ -73,7 +73,7 @@ const TEXT_MIN_SCALE       = 0.65;   // 5. 文字最小缩放 (0.3~1.0, 0.65=缩
 const TEXT_MAX_SCALE       = 1;    // 6. 文字最大回弹 (1.0~2.5, 1.5=放大50%)
 const TEXT_SHIFT_X         = '-6%';  // 7. 文字水平偏移 (如 '-6%' 左移)
 const CARD_MIN_HEIGHT      = 720;
-// 9. 卡片初始水平 margin → 0 (物理留白缩小到满屏)    // 8. 卡片最小高度 px (400~800)
+const SCROLL_LOCK_MS       = 1200;   // how many ms of wheel scrolling to complete the animation
 /* ═══════════════════════════════════════════════ */
 
 export default function HomePage() {
@@ -85,21 +85,74 @@ export default function HomePage() {
     offset: ['start end', 'end start'],
   });
 
-  // ── Card: from normal → fills screen
-  // As you scroll down through this section, the card grows to fill more of the viewport
-  const cardMargin = useTransform(scrollYProgress, [0, 0.55], ['12rem', '0rem']);
+  // ── Scroll-lock: when card is in view, wheel drives local progress ──
+  const cardProgress = useMotionValue(0);
+  const smoothProgress = useSpring(cardProgress, { stiffness: 200, damping: 30 });
+  const [isLocked, setIsLocked] = useState(false);
+  const lockTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // ── Image: starts small (showing the whole machine) → zooms in to detail
-  // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
-  const imageScale = useTransform(scrollYProgress, [0, 0.75, 1], [IMAGE_INITIAL_SCALE, IMAGE_INITIAL_SCALE, IMAGE_MAX_SCALE]);
-  // Shift zoom focal point toward center
-  const imageX = useTransform(scrollYProgress, [0, 0.6], ['0%', IMAGE_SHIFT_X]);
-  const imageY = useTransform(scrollYProgress, [0, 0.6], ['0%', IMAGE_SHIFT_Y]);
+  // Determine whether to use real scroll progress or the locked progress
+  // We'll use scrollYProgress for card entering the viewport initially,
+  // then lockProgress takes over when user scrolls the card area.
+  const activeProgress = isLocked ? smoothProgress : scrollYProgress;
+
+  // Wheel handler on the feature section
+  const handleWheel = useCallback((e: WheelEvent) => {
+    const section = featureRef.current;
+    if (!section) return;
+    
+    const rect = section.getBoundingClientRect();
+    // Card is roughly centered when its top is below viewport top and bottom above viewport bottom
+    const cardInView = rect.top <= 0 && rect.bottom >= 0;
+    
+    if (cardInView) {
+      e.preventDefault();
+      setIsLocked(true);
+      
+      // Accumulate wheel delta into progress
+      const delta = e.deltaY;
+      const sensitivity = 0.001; // how many pixels of scroll = 1% progress
+      const current = cardProgress.get();
+      const next = Math.max(0, Math.min(1, current + delta * sensitivity));
+      cardProgress.set(next);
+      
+      // Clear previous timeout
+      if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
+      
+      // Auto-unlock after idle
+      lockTimeoutRef.current = setTimeout(() => {
+        setIsLocked(false);
+      }, 1500);
+    } else {
+      setIsLocked(false);
+    }
+  }, [cardProgress]);
+
+  useEffect(() => {
+    const section = featureRef.current;
+    if (!section) return;
+    section.addEventListener('wheel', handleWheel, { passive: false });
+    return () => section.removeEventListener('wheel', handleWheel);
+  }, [handleWheel]);
+
+  // Reset cardProgress when unlocking
+  useEffect(() => {
+    if (!isLocked) {
+      cardProgress.set(0);
+    }
+  }, [isLocked, cardProgress]);
+
+  // ── Card: from normal → fills screen
+  const cardMargin = useTransform(activeProgress, [0, 0.55], ['16rem', '0rem']);
+
+  // ── Image: zoom animation driven by activeProgress
+  const imageScale = useTransform(activeProgress, [0, 0.75, 1], [IMAGE_INITIAL_SCALE, IMAGE_INITIAL_SCALE, IMAGE_MAX_SCALE]);
+  const imageX = useTransform(activeProgress, [0, 0.6], ['0%', IMAGE_SHIFT_X]);
+  const imageY = useTransform(activeProgress, [0, 0.6], ['0%', IMAGE_SHIFT_Y]);
 
   // ── Text: compress → expand
-  // First shrinks to 0.65x, then expands back to 0.97x
-  const textScale = useTransform(scrollYProgress, [0, 0.25, 0.6], [1, TEXT_MIN_SCALE, TEXT_MAX_SCALE]);
-  const textX = useTransform(scrollYProgress, [0, 0.55], ['0%', TEXT_SHIFT_X]);
+  const textScale = useTransform(activeProgress, [0, 0.25, 0.6], [1, TEXT_MIN_SCALE, TEXT_MAX_SCALE]);
+  const textX = useTransform(activeProgress, [0, 0.55], ['0%', TEXT_SHIFT_X]);
 
   const products = [
     {
@@ -155,8 +208,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Feature Spotlight: Full-viewport parallax card ── */}
-      <section ref={featureRef} className="pt-4 pb-16 md:pt-8 md:pb-20 bg-white">
+      {/* ── Feature Spotlight: Full-viewport parallax card with scroll-lock ── */}
+      <section ref={featureRef} className="py-[50vh] bg-white">
         <motion.div
           className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
           style={{ marginLeft: cardMargin, marginRight: cardMargin, minHeight: `${CARD_MIN_HEIGHT}px` }}
