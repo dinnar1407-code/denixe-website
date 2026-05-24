@@ -183,7 +183,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 relative overflow-hidden min-h-[640px] md:min-h-0">
+          <div className="flex-1 relative overflow-hidden">
             <motion.div
               className="absolute inset-0 w-full h-full"
               style={{ scale: imageScale, x: imageX, y: imageY }}
