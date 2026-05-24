@@ -140,7 +140,7 @@ export default function HomePage() {
       <section ref={featureRef} className="py-16 md:py-20 bg-white">
         <motion.div
           className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
-          style={{ scale: cardScale, minHeight: '480px' }}
+          style={{ minHeight: '480px' }}
         >
           {/* Left: text — compress then expand */}
           <motion.div
