@@ -72,7 +72,7 @@ const TEXT_MIN_SCALE       = 0.65;   // 5. 文字最小缩放 (0.3~1.0, 0.65=缩
 const TEXT_MAX_SCALE       = 1;    // 6. 文字最大回弹 (1.0~2.5, 1.5=放大50%)
 const TEXT_SHIFT_X         = '-6%';  // 7. 文字水平偏移 (如 '-6%' 左移)
 const CARD_MIN_HEIGHT      = 720;
-const CARD_MAX_SCALE       = 1.15;   // 9. 卡片最大缩放    // 8. 卡片最小高度 px (400~800)
+const CARD_MAX_SCALE       = 1.05;   // 9. 卡片最大缩放    // 8. 卡片最小高度 px (400~800)
 /* ═══════════════════════════════════════════════ */
 
 export default function HomePage() {
@@ -156,7 +156,7 @@ export default function HomePage() {
       <section ref={featureRef} className="pt-4 pb-16 md:pt-8 md:pb-20 bg-white">
         <motion.div
           className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
-          style={{ scale: cardScale, minHeight: `${CARD_MIN_HEIGHT}px` }}
+          style={{ scale: cardScale, minHeight: `${CARD_MIN_HEIGHT}px`, transformOrigin: 'center center' }}
         >
           {/* Left: text — compress then expand */}
           <motion.div
