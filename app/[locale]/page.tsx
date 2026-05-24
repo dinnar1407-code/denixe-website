@@ -72,7 +72,7 @@ const TEXT_MIN_SCALE       = 0.65;   // 5. 文字最小缩放 (0.3~1.0, 0.65=缩
 const TEXT_MAX_SCALE       = 1;    // 6. 文字最大回弹 (1.0~2.5, 1.5=放大50%)
 const TEXT_SHIFT_X         = '-6%';  // 7. 文字水平偏移 (如 '-6%' 左移)
 const CARD_MIN_HEIGHT      = 720;
-const CARD_MAX_SCALE       = 1.25;   // 9. 卡片最大缩放 (卡片从正常→放大溢出满屏)    // 8. 卡片最小高度 px (400~800)
+const CARD_MAX_SCALE       = 1.15;   // 9. 卡片最大缩放    // 8. 卡片最小高度 px (400~800)
 /* ═══════════════════════════════════════════════ */
 
 export default function HomePage() {
