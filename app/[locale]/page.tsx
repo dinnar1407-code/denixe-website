@@ -183,16 +183,22 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 relative overflow-hidden min-h-[640px] md:min-h-0">
+          <div className="flex-1 relative overflow-hidden min-h-[640px] md:min-h-0 flex items-center justify-center">
             <motion.div
-              className="absolute inset-0 w-full h-full"
-              style={{ scale: imageScale, x: imageX, y: imageY }}
+              className="relative shrink-0"
+              style={{ 
+                width: 'min(150vw, 2000px)',
+                aspectRatio: '1 / 1',
+                scale: imageScale, 
+                x: imageX, 
+                y: imageY 
+              }}
             >
               <Image
                 src="/images/products/dnx700u-realistic.webp"
                 alt="DNX 700U 5-Axis Machining Center"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 55vw"
                 priority
               />
