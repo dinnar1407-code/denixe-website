@@ -66,19 +66,21 @@ export default function HomePage() {
     offset: ['start end', 'end start'],
   });
 
-  // Entire card scales up to fill viewport
-  const cardScale = useTransform(scrollYProgress, [0, 0.6], [1, 1.12]);
-  
-  // Text column: shrinks and fades
-  const textScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.75]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.4], [1, 0.6]);
-  const textX = useTransform(scrollYProgress, [0, 0.5], ['0%', '-5%']);
+  // ── Card: from normal → fills screen
+  // As you scroll down through this section, the card grows to fill more of the viewport
+  const cardScale = useTransform(scrollYProgress, [0, 0.55], [1, 1.25]);
 
-  // Image: scales from overview (1x) to close-up detail (2.5x)
-  // and shifts the focal point slightly down-right
-  const imageScale = useTransform(scrollYProgress, [0, 0.55], [1, 2.3]);
-  const imageX = useTransform(scrollYProgress, [0, 0.55], ['0%', '-8%']);
-  const imageY = useTransform(scrollYProgress, [0, 0.55], ['0%', '-6%']);
+  // ── Image: starts small (showing the whole machine) → zooms in to detail
+  // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
+  const imageScale = useTransform(scrollYProgress, [0, 0.6], [0.85, 2.5]);
+  // Shift zoom focal point toward center
+  const imageX = useTransform(scrollYProgress, [0, 0.6], ['0%', '-5%']);
+  const imageY = useTransform(scrollYProgress, [0, 0.6], ['0%', '-4%']);
+
+  // ── Text: compress → expand
+  // First shrinks to 0.65x, then expands back to 0.97x
+  const textScale = useTransform(scrollYProgress, [0, 0.25, 0.6], [1, 0.65, 1.5]);
+  const textX = useTransform(scrollYProgress, [0, 0.55], ['0%', '-6%']);
 
   const products = [
     {
@@ -134,52 +136,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Feature Spotlight: full-card parallax zoom ── */}
+      {/* ── Feature Spotlight: Full-viewport parallax card ── */}
       <section ref={featureRef} className="py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <motion.div
+          className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
+          style={{ scale: cardScale, minHeight: '560px' }}
+        >
+          {/* Left: text — compress then expand */}
           <motion.div
-            className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
-            style={{ scale: cardScale, minHeight: '560px' }}
+            className="p-10 md:p-16 flex flex-col justify-center text-white"
+            style={{ flex: '0 0 45%', scale: textScale, x: textX }}
           >
-            {/* Left: text — compresses on scroll */}
-            <motion.div
-              className="p-10 md:p-16 flex flex-col justify-center text-white"
-              style={{ flex: '0 0 45%', scale: textScale, x: textX, opacity: textOpacity }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
-                DNX 700U Series
-              </h2>
-              <p className="text-[#a1a1a5] text-lg md:text-xl leading-relaxed mb-10 max-w-md font-light">
-                5-Axis Simultaneous Machining Center. B-axis tilting ±110°, C-axis 360°. VDI 3441 certified precision.
-              </p>
-              <div>
-                <a
-                  href="/products/dnx"
-                  className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
-                >
-                  View specifications
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Right: image zooms from overview to close-up detail */}
-            <div className="flex-1 relative overflow-hidden min-h-[400px] md:min-h-0">
-              <motion.div
-                className="absolute inset-0 w-full h-full"
-                style={{ scale: imageScale, x: imageX, y: imageY }}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              DNX 700U Series
+            </h2>
+            <p className="text-[#a1a1a5] text-lg md:text-xl leading-relaxed mb-10 max-w-md font-light">
+              5-Axis Simultaneous Machining Center. B-axis tilting ±110°, C-axis 360°. VDI 3441 certified precision.
+            </p>
+            <div>
+              <a
+                href="/products/dnx"
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-black text-sm font-semibold rounded-full hover:bg-gray-200 transition-colors"
               >
-                <Image
-                  src="/images/products/dnx700u-realistic.webp"
-                  alt="DNX 700U 5-Axis Machining Center"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 55vw"
-                  priority
-                />
-              </motion.div>
+                View specifications
+              </a>
             </div>
           </motion.div>
-        </div>
+
+          {/* Right: image — starts showing full machine, zooms into detail */}
+          <div className="flex-1 relative overflow-hidden min-h-[400px] md:min-h-0">
+            <motion.div
+              className="absolute inset-0 w-full h-full"
+              style={{ scale: imageScale, x: imageX, y: imageY }}
+            >
+              <Image
+                src="/images/products/dnx700u-realistic.webp"
+                alt="DNX 700U 5-Axis Machining Center"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 55vw"
+                priority
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* ── Mission ── */}
