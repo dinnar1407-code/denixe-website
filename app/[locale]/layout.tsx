@@ -9,10 +9,11 @@ import Footer from '@/components/layout/Footer';
 export default async function LocaleLayout({children,params}:{children:React.ReactNode;params:Promise<{locale:string}>}) {
   const {locale}=await params;
   const validLocales=routing.locales as readonly string[];
-  if(!validLocales.includes(locale)) notFound();
+  const resolvedLocale=locale||routing.defaultLocale;
+  if(!validLocales.includes(resolvedLocale)) notFound();
   const messages=await getMessages();
   return (
-    <html lang={locale}>
+    <html lang={resolvedLocale}>
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
           <Header/>
