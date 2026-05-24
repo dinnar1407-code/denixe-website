@@ -64,7 +64,7 @@ function AnimatedText({ text, baseDelayMs }: { text: string; baseDelayMs?: numbe
    🎛️  TUNING PARAMETERS — change these numbers
    then run: npx next build && vercel --prod --yes
    ═══════════════════════════════════════════════ */
-const IMAGE_INITIAL_SCALE  = 0.25;   // 1. 图片初始缩小量 (0.5~1.0, 越小越远 = 整机全貌)
+const IMAGE_INITIAL_SCALE  = 1;      // 1=完整全景 (object-contain)   // 1. 图片初始缩小量 (0.5~1.0, 越小越远 = 整机全貌)
 const IMAGE_MAX_SCALE      = 2.5;    // 2. 图片最大放大量 (1.5~4.0, 越大越近 = 局部细节)
 const IMAGE_SHIFT_X        = '-5%';  // 3. 图片水平偏移 (如 '-5%' 左移, '5%' 右移)
 const IMAGE_SHIFT_Y        = '-4%';  // 4. 图片垂直偏移 (如 '-4%' 上移, '4%' 下移)
@@ -189,7 +189,7 @@ export default function HomePage() {
                 src="/images/products/dnx700u-realistic.webp"
                 alt="DNX 700U 5-Axis Machining Center"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 55vw"
                 priority
               />
