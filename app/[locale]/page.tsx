@@ -183,7 +183,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Right: image — starts showing full machine, zooms into detail */}
-          <div className="flex-1 relative overflow-hidden flex items-center justify-end" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
+          <div className="flex-1 flex items-end justify-end" style={{ minHeight: `${CARD_MIN_HEIGHT}px` }}>
             <motion.div
               style={{ scale: imageScale, x: imageX, y: imageY }}
             >
