@@ -91,7 +91,7 @@ export default function HomePage() {
 
   // ── Image: starts small (showing the whole machine) → zooms in to detail
   // scale: 0.85 (overview) → 2.5x (close-up detail of the spindle/work area)
-  const imageScale = useTransform(scrollYProgress, [0, 0.6], [IMAGE_INITIAL_SCALE, IMAGE_MAX_SCALE]);
+  const imageScale = useTransform(scrollYProgress, [0, 0.75, 1], [IMAGE_INITIAL_SCALE, IMAGE_INITIAL_SCALE, IMAGE_MAX_SCALE]);
   // Shift zoom focal point toward center
   const imageX = useTransform(scrollYProgress, [0, 0.6], ['0%', IMAGE_SHIFT_X]);
   const imageY = useTransform(scrollYProgress, [0, 0.6], ['0%', IMAGE_SHIFT_Y]);
