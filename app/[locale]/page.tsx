@@ -120,6 +120,13 @@ export default function HomePage() {
     const next = Math.max(0, Math.min(1, current + delta * sensitivity));
     cardProgress.set(next);
     
+    // If animation reached either end, unlock immediately
+    if (next <= 0 || next >= 1) {
+      setIsLocked(false);
+      if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
+      return;
+    }
+    
     // Clear previous timeout
     if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
     
