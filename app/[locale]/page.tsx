@@ -96,36 +96,37 @@ export default function HomePage() {
   // then lockProgress takes over when user scrolls the card area.
   const activeProgress = isLocked ? smoothProgress : scrollYProgress;
 
-  // Wheel handler on the feature section
+  // Wheel handler — only lock when mouse is directly over the card
   const handleWheel = useCallback((e: WheelEvent) => {
     const section = featureRef.current;
     if (!section) return;
     
-    const rect = section.getBoundingClientRect();
-    // Card is roughly centered when its top is below viewport top and bottom above viewport bottom
-    const cardInView = rect.top <= 0 && rect.bottom >= 0;
+    // Only lock if the mouse target is inside the card (black card) itself
+    const card = section.querySelector('.rounded-2xl');
+    if (!card) return;
     
-    if (cardInView) {
-      e.preventDefault();
-      setIsLocked(true);
-      
-      // Accumulate wheel delta into progress
-      const delta = e.deltaY;
-      const sensitivity = 0.001; // how many pixels of scroll = 1% progress
-      const current = cardProgress.get();
-      const next = Math.max(0, Math.min(1, current + delta * sensitivity));
-      cardProgress.set(next);
-      
-      // Clear previous timeout
-      if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
-      
-      // Auto-unlock after idle
-      lockTimeoutRef.current = setTimeout(() => {
-        setIsLocked(false);
-      }, 1500);
-    } else {
+    const target = e.target as HTMLElement;
+    const isOnCard = card.contains(target) || target === card;
+    
+    if (!isOnCard) return; // let page scroll normally
+    
+    e.preventDefault();
+    setIsLocked(true);
+    
+    // Accumulate wheel delta into progress
+    const delta = e.deltaY;
+    const sensitivity = 0.001;
+    const current = cardProgress.get();
+    const next = Math.max(0, Math.min(1, current + delta * sensitivity));
+    cardProgress.set(next);
+    
+    // Clear previous timeout
+    if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
+    
+    // Auto-unlock after idle
+    lockTimeoutRef.current = setTimeout(() => {
       setIsLocked(false);
-    }
+    }, 1500);
   }, [cardProgress]);
 
   useEffect(() => {
@@ -209,7 +210,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Feature Spotlight: Full-viewport parallax card with scroll-lock ── */}
-      <section ref={featureRef} className="py-[50vh] bg-white">
+      <section ref={featureRef} className="pt-4 pb-16 md:pt-8 md:pb-20 bg-white">
         <motion.div
           className="bg-[#191818] rounded-2xl overflow-hidden flex flex-col md:flex-row"
           style={{ marginLeft: cardMargin, marginRight: cardMargin, minHeight: `${CARD_MIN_HEIGHT}px` }}
