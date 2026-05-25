@@ -145,9 +145,7 @@ export default function HomePage() {
 
   // Reset cardProgress when unlocking
   useEffect(() => {
-    if (!isLocked) {
-      cardProgress.set(0);
-    }
+    // Don't reset — keep the current zoom state
   }, [isLocked, cardProgress]);
 
   // ── Card: from normal → fills screen
