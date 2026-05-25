@@ -109,22 +109,22 @@ export default function HomePage() {
     
     if (!isOnCard) return;
     
-    e.preventDefault();
-    setIsLocked(true);
-    
     const delta = e.deltaY;
     const sensitivity = 0.0012;
     const current = cardProgress.get();
     const next = Math.max(0, Math.min(1, current + delta * sensitivity));
-    cardProgress.set(next);
-    lastLockedProgress.current = next;
     
-    // If animation reached either end, unlock immediately
-    if (next <= 0 || next >= 1) {
+    // If at boundary and user is scrolling further in that direction, let page scroll
+    if ((current <= 0 && delta <= 0) || (current >= 1 && delta >= 0)) {
       setIsLocked(false);
       if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
-      return;
+      return; // let event pass through to scroll page
     }
+    
+    e.preventDefault();
+    setIsLocked(true);
+    cardProgress.set(next);
+    lastLockedProgress.current = next;
     
     if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
     
