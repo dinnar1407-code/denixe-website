@@ -90,35 +90,34 @@ export default function HomePage() {
   const smoothProgress = useSpring(cardProgress, { stiffness: 200, damping: 30 });
   const [isLocked, setIsLocked] = useState(false);
   const lockTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  // Remember the last locked progress value so we don't jump back to scroll position
+  const lastLockedProgress = useRef(0);
 
-  // Determine whether to use real scroll progress or the locked progress
-  // We'll use scrollYProgress for card entering the viewport initially,
-  // then lockProgress takes over when user scrolls the card area.
-  const activeProgress = isLocked ? smoothProgress : scrollYProgress;
+  // Use the locked progress when in lock mode, otherwise keep the last known value
+  const activeProgress = useTransform(cardProgress, v => v);
 
   // Wheel handler — only lock when mouse is directly over the card
   const handleWheel = useCallback((e: WheelEvent) => {
     const section = featureRef.current;
     if (!section) return;
     
-    // Only lock if the mouse target is inside the card (black card) itself
     const card = section.querySelector('.rounded-2xl');
     if (!card) return;
     
     const target = e.target as HTMLElement;
     const isOnCard = card.contains(target) || target === card;
     
-    if (!isOnCard) return; // let page scroll normally
+    if (!isOnCard) return;
     
     e.preventDefault();
     setIsLocked(true);
     
-    // Accumulate wheel delta into progress
     const delta = e.deltaY;
-    const sensitivity = 0.001;
+    const sensitivity = 0.0012;
     const current = cardProgress.get();
     const next = Math.max(0, Math.min(1, current + delta * sensitivity));
     cardProgress.set(next);
+    lastLockedProgress.current = next;
     
     // If animation reached either end, unlock immediately
     if (next <= 0 || next >= 1) {
@@ -127,10 +126,8 @@ export default function HomePage() {
       return;
     }
     
-    // Clear previous timeout
     if (lockTimeoutRef.current) clearTimeout(lockTimeoutRef.current);
     
-    // Auto-unlock after idle
     lockTimeoutRef.current = setTimeout(() => {
       setIsLocked(false);
     }, 1500);
@@ -145,7 +142,7 @@ export default function HomePage() {
 
   // Reset cardProgress when unlocking
   useEffect(() => {
-    // Don't reset — keep the current zoom state
+    // Keep the last locked progress value
   }, [isLocked, cardProgress]);
 
   // ── Card: from normal → fills screen
