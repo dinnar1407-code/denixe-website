@@ -48,7 +48,7 @@ export default function Header() {
   const currentNative=allLocales.find(l=>l.code===currentLocale)?.native||'English';
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed top-0 w-full z-50 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <button onClick={() => router.push('/')} className="flex items-center">
           {/* Logo: ~234x72 (缩小10%) */}
