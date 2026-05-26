@@ -52,7 +52,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <button onClick={() => router.push('/')} className="flex items-center">
           {/* Logo: ~234x72 (缩小10%) */}
-          <Image src="/denixe-logo.png" alt="DENIXE" width={234} height={72} className="h-18 w-auto" priority />
+          <Image src="/denixe-logo.png" alt="DENIXE" width={146} height={80} className="h-14 w-auto" priority />
         </button>
         <nav className="hidden md:flex items-center gap-8">
           {links.map(l=><button key={l.href} onClick={() => router.push(l.href)} className="text-sm text-gray-600 hover:text-gray-900 hover:underline transition-colors">{l.label}</button>)}
