@@ -145,8 +145,8 @@ export default function HomePage() {
     // Keep the last locked progress value
   }, [isLocked, cardProgress]);
 
-  // ── Card: from normal → fills screen
-  const cardMargin = useTransform(activeProgress, [0, 0.55], ['16rem', '0rem']);
+  // ── Card: from normal → fills screen (responsive margin)
+  const cardMargin = useTransform(activeProgress, [0, 0.55], ['1.5rem', '0rem']);
 
   // ── Image: zoom animation driven by activeProgress
   const imageScale = useTransform(activeProgress, [0, 0.75, 1], [IMAGE_INITIAL_SCALE, IMAGE_INITIAL_SCALE, IMAGE_MAX_SCALE]);
