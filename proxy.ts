@@ -1,4 +1,11 @@
 import createMiddleware from 'next-intl/middleware';
 import {routing} from './i18n/routing';
 export const proxy=createMiddleware(routing);
-export const config = {matcher:['/','/(en|zh|de|ja|it|ko|hi|pt|fr)/:path*']};
+export const config = {
+  matcher: [
+    // Match all pathnames except for
+    // - … if they start with `/api`, `/trpc`, `/_next` or `/_vercel`
+    // - … the ones containing a dot (e.g. `favicon.ico`)
+    '/((?!api|trpc|_next|_vercel|.*\\..*).*)'
+  ]
+};

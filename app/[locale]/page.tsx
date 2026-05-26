@@ -146,7 +146,18 @@ export default function HomePage() {
   }, [isLocked, cardProgress]);
 
   // ── Card: from normal → fills screen (responsive margin)
-  const cardMargin = useTransform(activeProgress, [0, 0.55], ['1.5rem', '0rem']);
+  // Desktop: 16rem → 0rem; Mobile: 1.5rem → 0rem
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const checkSize = () => setIsDesktop(window.innerWidth >= 768);
+    checkSize();
+    window.addEventListener('resize', checkSize);
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+  const desktopInitial = '16rem';
+  const mobileInitial = '1.5rem';
+  const cardMarginInitial = isDesktop ? desktopInitial : mobileInitial;
+  const cardMargin = useTransform(activeProgress, [0, 0.55], [cardMarginInitial, '0rem']);
 
   // ── Image: zoom animation driven by activeProgress
   const imageScale = useTransform(activeProgress, [0, 0.75, 1], [IMAGE_INITIAL_SCALE, IMAGE_INITIAL_SCALE, IMAGE_MAX_SCALE]);
