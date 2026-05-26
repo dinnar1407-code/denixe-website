@@ -41,10 +41,6 @@ export default function Header() {
     setLangOpen(false);
   }
 
-  function localPath(href:string) {
-    return href;
-  }
-
   const currentNative=allLocales.find(l=>l.code===currentLocale)?.native||'English';
 
   return (
@@ -55,7 +51,7 @@ export default function Header() {
           <Image src="/denixe-logo.png" alt="DENIXE" width={146} height={80} className="h-14 w-auto" priority />
         </button>
         <nav className="hidden md:flex items-center gap-8">
-          {links.map(l=><button key={l.href} onClick={() => router.push(l.href)} className="text-sm text-gray-600 hover:text-gray-900 hover:underline transition-colors">{l.label}</button>)}
+          {links.map(l=><button key={l.href} onClick={() => {const fullPath = currentLocale === 'en' ? l.href : '/' + currentLocale + l.href; router.push(fullPath)}} className="text-sm text-gray-600 hover:text-gray-900 hover:underline transition-colors">{l.label}</button>)}
           <div className="relative ml-4 border-l border-gray-200 pl-4">
             <button
               onClick={()=>setLangOpen(!langOpen)}
@@ -89,7 +85,7 @@ export default function Header() {
       </div>
       {open&&(
         <div className="md:hidden bg-white border-b border-gray-200 px-6 py-4 flex flex-col gap-3">
-          {links.map(l=><button key={l.href} onClick={() => {router.push(l.href); setOpen(false)}} className="text-left text-sm text-gray-600 hover:text-gray-900 transition-colors">{l.label}</button>)}
+          {links.map(l=><button key={l.href} onClick={() => {const fullPath = currentLocale === 'en' ? l.href : '/' + currentLocale + l.href; router.push(fullPath); setOpen(false)}} className="text-left text-sm text-gray-600 hover:text-gray-900 transition-colors">{l.label}</button>)}
           <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-200">
             {allLocales.map(l=>(
               <button
